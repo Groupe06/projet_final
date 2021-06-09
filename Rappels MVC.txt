@@ -1,3 +1,0 @@
-M = model --> requetes 
-view --> front + affichage back
-controler --> algos back + réunification reste 
