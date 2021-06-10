@@ -1,4 +1,5 @@
 
+
 /* Valeurs générals de la page */
 :root {
     --transparent:rgba(255,255,255,0);
@@ -42,6 +43,8 @@ body > div#wrapper{
 /* background */
 body > div#wrapper > img#fond {
     /*apparence*/
+
+
     /* Intéréssant si création du cadrillage nous même : https://projects.verou.me/css3patterns/#blueprint-grid*/
     width : 100vw;
     max-width: 100%;
@@ -70,112 +73,145 @@ body > div#wrapper > img#gauche {
     height:80vh;
 }
 
-/* l'élément de fond rond avec les lignes (effet fond de radar)*/
-body > div#wrapper > ul#time {
-    position: absolute;
-    margin-top: 75px;
-    width: max(37vw,255px);
-    height: max(37vw,255px);
-    border-radius: 50%;
-    background:
-    repeating-radial-gradient(100% 100%, var(--transparent),var(--transparent) max(3.45vw,22px),var(--white) max(3.5vw,23px), var(--white) max(3.5vw,23px),var(--transparent) max(3.5vw,23px),var(--white) max(3.5vw,23px)),
-    radial-gradient(var(--transparent),var(--transparent)max(7.60vw,50px), var(--neon_blue) max(7.62vw,51px), var(--transparent)max(7.70vw,52px)),
-    linear-gradient(to right bottom, var(--transparent),var(--transparent)105px, var(--white) 106px, var(--transparent)107px)
-}
-
 rect {
+    /*apparence*/
     fill: var(--neon_blue);
 }
 
-/*radar*/
-/* svg{
-    position: absolute;
-    top: 15%;
-    max-width: 100%;
-} */
 
-.radar {
-    display: flex;
-    justify-content: center;
-    position: absolute;
-    top: 15%;
-    max-width: 100%;
+div.radar svg {
+    /*apparence*/
+    width: max(37vw,350px);
+    height: max(37vw,350px);
 }
 
-.radar h2 {
-    font-family: 'zekton';
-    font-size: 1.5em;
+.radar {
+    /*Placement*/
     position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    
+
+    /*apparence*/
+    width: max(37vw,255px);
+    height: max(37vw,255px);
+}
+
+/* La chronologie (les dates 10ans) */
+.radar ul#date {
+    position: absolute;
+    text-align: center;
     color: var(--white);
-    z-index: 2;
+    font-family: 'zekton';
+    font-size: max(1vw,7px);
+}
+
+.radar ul#date li:nth-child(1) {
+    position: absolute;
+    color: var(--neon_blue);
+    bottom: max(12vw,80px);
+}
+.radar ul#date li:nth-child(2) {
+    position: absolute;
+    top: max(4vw,30px);
+}
+.radar ul#date li:nth-child(3) {
+    position: absolute;
+    top: max(8vw,60px);
+}
+.radar ul#date li:nth-child(4) {
+    position: absolute;
+    top: max(13vw,90px);
+}
+.radar ul#date li:nth-child(5) {
+    /* position: absolute; JE COMPRENDS PAS PQ LA POSITION FAIT BUGGER TOUT*/
+    top: max(16vw,110px);
 }
 
 /* Tout les noms des héros */
+.radar div.name {
+    position: absolute;
+}
+.radar h2 {
+    position: absolute;
 
+    font-family: 'zekton';
+    font-size: max(1.5vw,13px);
+    color: var(--white);
+    /* width: 100px;
+    height: 100px;
+    border-radius: 100%;
+    background: radial-gradient(circle, rgba(0,254,255,0.7) 0%, rgba(106, 128, 128, 0.401) 61%, rgba(0,254,255,0.13238798937543772) 75%); */
+}
 /* Black Widow */
 .radar h2:nth-child(1) {
-    top: 0em;
-    right: 2em;
+    bottom: max(18vw,130px);
+    left: max(6vw,40px);
 }
 
 /* Thor */
 .radar h2:nth-child(2) {
-    top: 4em;
-    right: -0.5em;
+    bottom: max(12vw,70px);
+    left: max(17vw,120px);
 }
 
 /* Black Panther */
 .radar h2:nth-child(3) {
-    top: 12.5em;
-    right: -7.5em;
+    left: max(20vw,140px);
+    bottom: -1.5vw;
 }
 
 /* Hulk */
 .radar h2:nth-child(4) {
-    bottom: 4em;
-    right: -1em;
+    top: max(12vw,70px);
+    left: max(17vw,120px);
 }
 
 /* Captain Marvel */
 .radar h2:nth-child(5) {
-    bottom: 0em;
-    right: 1em;
+    top: max(18vw,130px);
+    left: max(6vw,40px);
 }
 
 /* Ant Man */
 .radar h2:nth-child(6) {
-    bottom: 0em;
-    left: 3.5em;
+    top: max(18vw,130px);
+    right: max(6vw,40px);
 }
 
 /* Docter Strange */
 .radar h2:nth-child(7) {
-    bottom: 4em;
-    left: -5em;
+    top: max(12vw,70px);
+    right: max(17vw,120px);
 }
 
 /* Captain America */
 .radar h2:nth-child(8) {
-    top: 12.5em;
-    left: -8.5em;
+    right: max(20vw,140px);
+    bottom: -1.5vw;
 }
 
 /* Iron Man */
 .name h2:nth-child(9) {
-    top: 4em;
-    left: -3em;
+    bottom: max(12vw,70px);
+    right: max(17vw,120px);
 }
 
 /* Spiderman */
 .radar h2:nth-child(10) {
-    top: 0em;
-    left: 2.5em;
+    bottom: max(18vw,130px);
+    right: max(6vw,40px);
 }
 
-#Poweroff {
+
+a#Poweroff > img {
     position: absolute;
-    top: 10px;
-    right: 13px;
+    top: 1%;
+    right: 1%;
+    width: 2vw;
+    text-align: center;
 }
 
 @media screen and (max-width: 500px) {
