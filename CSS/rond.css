@@ -126,7 +126,7 @@ div.radar svg {
     top: max(13vw,90px);
 }
 .radar ul#date li:nth-child(5) {
-    /* position: absolute; JE COMPRENDS PAS PQ LA POSITION FAIT BUGGER TOUT*/
+    position: absolute; 
     top: max(16vw,110px);
 }
 
