@@ -1,6 +1,7 @@
 var herosName = document.querySelectorAll(".radar div.name p")
 var tourHero = document.querySelector("div.radar")
 var herosClicked = []
+var herosPhoto = ["assets/DS.svg","assets/SM.svg"]
 
 for (var i = 0; i < herosName.length ; i ++){
     herosName[i].onclick = function() {
@@ -22,13 +23,15 @@ for (var i = 0; i < herosName.length ; i ++){
                 document.querySelector("div.radar div.remaining_time").classList.toggle("coco")
             }
             else {
-                console.log("là")
+                
+                document.querySelector("div.radar div.remaining_time img").src = herosPhoto[this.id - 1]
             }
             
             
 
         } else {
             document.querySelector("div.radar div.remaining_time").classList.toggle("coco")
+            document.querySelector("div.radar div.remaining_time img").src = herosPhoto[this.id - 1]
         }
 
         
