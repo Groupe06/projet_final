@@ -27,7 +27,9 @@
     
 
 
-<?php require_once("cercle.php"); ?>
+<?php
+$tableau_svg = []; 
+require_once("cercle.php"); ?>
 
 
 

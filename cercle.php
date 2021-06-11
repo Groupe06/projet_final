@@ -1,6 +1,6 @@
 <?php require_once("connexion_bdd.php");?>
     
-<svg width="624" height="623" viewBox="0 0 624 623" fill="none" xmlns="http://www.w3.org/2000/svg">
+<svg width="550" height="550" viewBox="0 0 624 623" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <!-- Cercle représentant les années -->
                 <circle cx="310" cy="315" r="5" fill="white" fill-opacity="0.3"/>
                 <circle cx="310" cy="314" r="76.5" stroke="white" stroke-opacity="0.3" stroke-width="3"/>
@@ -16,6 +16,14 @@
                 <line x1="404.608" y1="607.231" x2="212.558" y2="16.1619" stroke="white" stroke-opacity="0.3" stroke-width="3"/>
                 <!-- Barres sur lesquels sont positionnées les "heros" -->
                 <!-- Apport boucle personnages -->
-                <?php require_once("requetes_points.php"); ?>
+                <?php 
+                
+                require_once("requetes_points.php"); 
+                //var_dump($tableau_svg);
+                for($i=0; $i < count($tableau_svg); $i++){
+                    echo $tableau_svg[$i];
+                }
+                
+                ?>
             </svg> 
 
