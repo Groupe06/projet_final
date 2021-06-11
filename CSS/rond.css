@@ -101,110 +101,161 @@ div.radar svg {
 
 /* La chronologie (les dates 10ans) */
 .radar ul#date {
+    /*position*/
     position: absolute;
     text-align: center;
+
+    /*apparence*/
     color: var(--white);
     font-family: 'zekton';
     font-size: max(1vw,7px);
 }
-
+/*2021*/
 .radar ul#date li:nth-child(1) {
     position: absolute;
     color: var(--neon_blue);
-    bottom: max(10.5vw,80px);
+    bottom: max(10.5vw,70px);
 }
+/*2010*/
 .radar ul#date li:nth-child(2) {
     position: absolute;
     top: max(4vw,30px);
 }
+/*2020*/
 .radar ul#date li:nth-child(3) {
     position: absolute;
     top: max(8vw,60px);
 }
+/*2030*/
 .radar ul#date li:nth-child(4) {
     position: absolute;
     top: max(13vw,90px);
 }
+/*2040*/
 .radar ul#date li:nth-child(5) {
-    position: absolute; 
-    top: max(16vw,110px);
+    position: relative;
+    top: max(17vw,120px);
 }
 
 /* Tout les noms des héros */
 .radar div.name {
     position: absolute;
 }
-.radar h2 {
+.radar div.name > p {
+    /*position*/
     position: absolute;
 
+    /*apparence*/
     font-family: 'zekton';
-    font-size: max(1.5vw,13px);
+    font-size: max(1.5vw,10px);
     color: var(--white);
-    /* width: 100px;
-    height: 100px;
+    /*A voir*/
     border-radius: 100%;
-    background: radial-gradient(circle, rgba(0,254,255,0.7) 0%, rgba(106, 128, 128, 0.401) 61%, rgba(0,254,255,0.13238798937543772) 75%); */
+    background: radial-gradient(circle, rgba(0,254,255,0.6) 0%, rgba(106, 128, 128, 0.3) 41%,rgba(106, 128, 128, 0)60%);
 }
+
 /* Black Widow */
-.radar h2:nth-child(1) {
+.radar p:nth-child(1) {
     bottom: max(18vw,130px);
     left: max(6vw,40px);
 }
 
 /* Thor */
-.radar h2:nth-child(2) {
+.radar p:nth-child(2) {
     bottom: max(12vw,70px);
     left: max(17vw,120px);
 }
 
 /* Black Panther */
-.radar h2:nth-child(3) {
-    left: max(20vw,140px);
+.radar p:nth-child(3) {
+    left: max(20vw,135px);
     bottom: -1.5vw;
 }
 
 /* Hulk */
-.radar h2:nth-child(4) {
+.radar p:nth-child(4) {
     top: max(12vw,70px);
     left: max(17vw,120px);
 }
 
 /* Captain Marvel */
-.radar h2:nth-child(5) {
+.radar p:nth-child(5) {
     top: max(18vw,130px);
     left: max(6vw,40px);
 }
 
 /* Ant Man */
-.radar h2:nth-child(6) {
+.radar p:nth-child(6) {
     top: max(18vw,130px);
     right: max(6vw,40px);
 }
 
 /* Docter Strange */
-.radar h2:nth-child(7) {
+.radar p:nth-child(7) {
     top: max(12vw,70px);
     right: max(17vw,120px);
 }
 
 /* Captain America */
-.radar h2:nth-child(8) {
-    right: max(20vw,140px);
+.radar p:nth-child(8) {
+    right: max(20vw,135px);
     bottom: -1.5vw;
 }
 
 /* Iron Man */
-.name h2:nth-child(9) {
+.name p:nth-child(9) {
     bottom: max(12vw,70px);
     right: max(17vw,120px);
 }
 
 /* Spiderman */
-.radar h2:nth-child(10) {
+.radar p:nth-child(10) {
     bottom: max(18vw,130px);
     right: max(6vw,40px);
 }
 
+div.radar div.remaining_time:not(.coco){
+    display: none;
+}
+
+div.radar div.remaining_time {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    z-index: 2;
+    width: max(25vw,170px);
+    height:max(25vw,170px);
+    border-radius:100%;
+    background-color: rgba(65, 187, 193, 0.3);
+    backdrop-filter: blur(5px);
+}
+div.radar div.remaining_time img#hero {
+    position: absolute;
+    top: 0;
+    z-index: 3;
+    width: max(18vw,120px);
+    height:max(18vw,120px);
+}
+div.radar div.remaining_time > p {
+    
+    z-index: 3;
+    /*apparence*/
+    color: var(--white);
+    font-family: 'zekton';
+    font-size: max(1vw,7px);
+}
+div.radar div.remaining_time > p.dDay {
+    margin-top: 230px;
+    margin-bottom:50px;
+    font-size: max(2vw,7px);
+}
+div.radar div.remaining_time > p.info {
+    text-decoration: underline;
+    cursor: pointer;
+}
 
 a#Poweroff > img {
     position: absolute;
