@@ -20,7 +20,7 @@ for (var i = 0; i < herosName.length ; i ++){
 
             
             if (this.id == herosClicked[herosClicked.length-2]) {
-                document.querySelector("div.radar div.remaining_time").classList.toggle("coco")
+                document.querySelector("div.radar div.remaining_time").classList.toggle("visible")
             }
             else {
                 
@@ -37,18 +37,8 @@ for (var i = 0; i < herosName.length ; i ++){
         
 
 
-
-
-
-        //var remaining_time = document.createAttribute("time")
-        /* var remaining_time = document.createElement("div")
-        remaining_time.className = "remaining_time"
-        tourHero.appendChild(remaining_time) */
         
     }
         
 }
 
-/* function coucou() { 
-    document.querySelector("div.radar div#remaining_time").style.display="none";
- } */

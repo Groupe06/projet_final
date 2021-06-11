@@ -214,11 +214,12 @@ div.radar svg {
     right: max(6vw,40px);
 }
 
-div.radar div.remaining_time:not(.coco){
+div.radar div.remaining_time:not(.visible){
     display: none;
 }
 
 div.radar div.remaining_time {
+    /*placement*/
     position: absolute;
     display: flex;
     flex-direction: column;
@@ -226,6 +227,7 @@ div.radar div.remaining_time {
     align-items: center;
     box-sizing: border-box;
     z-index: 2;
+    /*apparence*/
     width: max(25vw,170px);
     height:max(25vw,170px);
     border-radius:100%;
@@ -233,14 +235,16 @@ div.radar div.remaining_time {
     backdrop-filter: blur(5px);
 }
 div.radar div.remaining_time img#hero {
+    /*placement*/
     position: absolute;
     top: 0;
     z-index: 3;
+    /*apparence*/
     width: max(18vw,120px);
     height:max(18vw,120px);
 }
 div.radar div.remaining_time > p {
-    
+    /*placement*/
     z-index: 3;
     /*apparence*/
     color: var(--white);
@@ -248,16 +252,20 @@ div.radar div.remaining_time > p {
     font-size: max(1vw,7px);
 }
 div.radar div.remaining_time > p.dDay {
+    /*apparence*/
     margin-top: 230px;
     margin-bottom:50px;
     font-size: max(2vw,7px);
+    background-color: blueviolet;
 }
 div.radar div.remaining_time > p.info {
+    /*apparence*/
     text-decoration: underline;
     cursor: pointer;
 }
 
 a#Poweroff > img {
+    /*placement*/
     position: absolute;
     top: 1%;
     right: 1%;
