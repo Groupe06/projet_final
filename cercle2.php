@@ -1,6 +1,6 @@
 <?php // VA VERS REQUETS_POINTS
 // décide placement néons
-require("fonctions_positions.php");
+include_once("fonctions_positions.php");
 //var_dump($total_points);
 switch ($i){
 
