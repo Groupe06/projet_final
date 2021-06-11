@@ -10,4 +10,3 @@ try{
 $requete = ("SELECT * FROM super_heros");
 $reponse = $bdd->query($requete);
 ?>
-s
