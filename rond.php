@@ -46,15 +46,15 @@
                 <line x1="59.7384" y1="495.153" x2="562.532" y2="129.853" stroke="white" stroke-opacity="0.3" stroke-width="3"/>
                 <line x1="404.608" y1="607.231" x2="212.558" y2="16.1619" stroke="white" stroke-opacity="0.3" stroke-width="3"/>
                 <!-- Barres sur lesquels sont positionnées les "heros" -->
-                <rect x="310.153" y="313.847" width="18.672" height="20" transform="rotate(162.195 310.153 313.847)" fill="#00EBEC"/>
-                <rect x="310.153" y="313.847" width="18.672" height="20" transform="rotate(-161.983 310.153 313.847)" fill="#00EBEC"/>
-                <rect x="310.153" y="313.847" width="18.672" height="20" transform="rotate(54.0612 310.153 313.847)" fill="#00EBEC"/>
-                <rect x="310.153" y="313.847" width="18.672" height="20" transform="rotate(-125.835 310.153 313.847)" fill="#00EBEC"/>
-                <rect x="350.153" y="313.844" width="18.672" height="20" transform="rotate(90 330.153 294.844)" fill="#00EBEC"/>
-                <rect x="310.153" y="313.847" width="18.672" height="20" transform="rotate(125.964 310.153 313.847)" fill="#00EBEC"/>
-                <rect x="310.153" y="313.847" width="18.672" height="20" transform="rotate(-53.7143 310.153 313.847)" fill="#00EBEC"/>
-                <rect x="310.153" y="313.847" width="18.672" height="20" transform="rotate(-17.5918 310.153 313.847)" fill="#00EBEC"/>
-                <rect x="310.153" y="313.847" width="18.672" height="20" transform="rotate(18.1438 310.153 313.847)" fill="#00EBEC"/>
+                <?php 
+                
+                require_once("requetes_points.php"); 
+                //var_dump($tableau_svg);
+                for($i=0; $i < count($tableau_svg); $i++){
+                    echo $tableau_svg[$i];
+                }
+                
+                ?>
             </svg>            
             <!-- Nom des héros -->
             <div class="name">
