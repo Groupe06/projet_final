@@ -36,6 +36,8 @@ body > div#wrapper{
     height : 100vh;
     box-sizing: content-box;
     overflow:hidden;
+
+    background: url("/assets/fondNoirCarreaux.png") center;
     
 }
 
@@ -61,6 +63,24 @@ body > div#wrapper > img#haut {
     /*apparence*/
     width:100vw;
     min-height: 90px; /*à revoir !!!!!!*/
+}
+body > div#wrapper > header {
+    position: absolute;
+    top: 0;
+    width:100vw;
+    max-width:100%;
+    box-sizing: border-box;
+    color: white;
+
+}
+body > div#wrapper > header > div#mainHeader {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+body > div#wrapper > header > div#mainHeader > div#content {
+    display: flex;
+    flex-direction: column;
 }
 
 /*élément de gauche  */
@@ -253,15 +273,28 @@ div.radar div.remaining_time > p {
 }
 div.radar div.remaining_time > p.dDay {
     /*apparence*/
-    margin-top: 230px;
-    margin-bottom:50px;
+    margin-top: 45%;
+    margin-bottom:5%;
     font-size: max(2vw,7px);
     background-color: blueviolet;
 }
 div.radar div.remaining_time > p.info {
     /*apparence*/
-    text-decoration: underline;
+    border-bottom: 1px white solid;
     cursor: pointer;
+    
+    opacity: 1;
+}
+/*Lancement de l'animation au clic */
+div.radar div.remaining_time > p.spoiler {
+    animation: spoiler 0.5s linear 0.3s ;
+}
+/*Clignotement du texte qui ouvre la data*/
+@keyframes spoiler {
+    0% {opacity: 0;}
+    50% {opacity: 1;}
+    100% {opacity: 0;}
+    
 }
 
 a#Poweroff > img {

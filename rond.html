@@ -13,23 +13,37 @@
     <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css">
     <!--CSS de landing & onboarding -->
     <link rel="stylesheet" href="CSS/rond.css">
+    <link rel="stylesheet" href="CSS/header.css">
 
     <title>Radar</title>
 </head>
 <body>
 
     <div id="wrapper">
-        <!-- fond général -->
-        <!--test vidéo 
-        <video autoplay loop id="fond" src="assets/techno.mp4" alt="fond noir gradillé blanc"></video>-->
-        <img id="fond" src="assets/fondNoirCarreaux.png" alt="fond noir gradillé blanc">
-        <!--élément du haut (fond)-->
+        <!-- Le header avec les iamges --> 
+        <header>
+            <div id="mainHeader">
+                <img src="assets/mainHeader.png" alt="bacground du header de la page">
+                    <div id="logoAndNameShield">
+                        <img src="assets/logo_shield.svg" alt="Le logo du shield (marvel) en blanc">
+                        <div>
+                            <p>S.H.I.E.L.D</p>
+                            <p>Private Acess</p>
+                            <p>superheroes life 
+                             <br>expectancy</p>
+                        </div>
+                    </div>
+            </div>
+            <img id="midheader" src="assets/midheader.png" alt="">
+            <img src="assets/buttonheader.png" alt="">
+        </header>
+        <!--élément du haut (fond)
         <img id="haut" src="assets/barreHaut.png" alt="">
-        <!--élément de gauche (fond)-->
-        <img id="gauche" src="assets/barreGauche.png" alt="">
+        élément de gauche (fond)
+        <img id="gauche" src="assets/barreGauche.png" alt=""> -->
         
-        <!-- Bouton Power Off -->
-        <a id="Poweroff" href="landing.html"><img src="assets/PowerOff.svg" alt="Bouton Power Off - Quitter la platerforme"></a>
+
+        
 
         <!--Cercle radar (fond)-->
         <div class="radar">
@@ -85,12 +99,13 @@
             <div class="remaining_time">
                 <img id="hero" alt="Avengers logo">
                 <p class="dDay"><span>000</span>j <span>00</span>h <span>00</span>m <span>00</span>s</p>
-                <p class="info">infos</p>
+                <p class="info">Découvrir pourquoi ?</p>
             </div>
-
+ 
         </div>
+
+       
     </div> 
     <script src="JS/rond.js"></script>
-    
 </body>
 </html>
