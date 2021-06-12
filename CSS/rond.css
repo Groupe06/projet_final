@@ -20,11 +20,11 @@ body {
     overflow:hidden;
 }
 
-
 /* Div qui servira à placer tous les éléments de fonds */
 body,
 body > div#wrapper{
     /*placement*/
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -36,52 +36,11 @@ body > div#wrapper{
     height : 100vh;
     box-sizing: content-box;
     overflow:hidden;
-
+    /* background */
     background: url("/assets/fondNoirCarreaux.png") center;
     
 }
 
-/* Background de la page + l'élément de haut et l'élément de haut*/
-/* background */
-body > div#wrapper > img#fond {
-    /*apparence*/
-
-
-    /* Intéréssant si création du cadrillage nous même : https://projects.verou.me/css3patterns/#blueprint-grid*/
-    width : 100vw;
-    max-width: 100%;
-    height : 100vh;
-    position: relative;
-
-}
-
-/*élément du haut*/
-body > div#wrapper > img#haut {
-    /*position*/
-    position: absolute;
-    top: 0;
-    /*apparence*/
-    width:100vw;
-    min-height: 90px; /*à revoir !!!!!!*/
-}
-body > div#wrapper > header {
-    position: absolute;
-    top: 0;
-    width:100vw;
-    max-width:100%;
-    box-sizing: border-box;
-    color: white;
-
-}
-body > div#wrapper > header > div#mainHeader {
-    position: absolute;
-    top: 0;
-    left: 0;
-}
-body > div#wrapper > header > div#mainHeader > div#content {
-    display: flex;
-    flex-direction: column;
-}
 
 /*élément de gauche  */
 body > div#wrapper > img#gauche {
@@ -93,30 +52,47 @@ body > div#wrapper > img#gauche {
     height:80vh;
 }
 
-rect {
-    /*apparence*/
-    fill: var(--neon_blue);
+
+
+/*Le container contenant le radar + les noms + les photo et descriptif*/
+/*La container permettant de créer le responsive sur mobile*/
+body > div#wrapper > div#container {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap-reverse;/*pour renvoyer l'image en bas en bas au responsive*/
+    justify-content: space-around;
+    align-items: center;
+    align-content: space-around;
+    width: 100vw;
+    max-width: 100%;
+    height : calc(100vh - 163px); /* Pour pas que le radar passe en dessous du header (à revoir avec le reponsive */
+    max-height: 100%;
 }
 
 
+
+div#container > div.radar {
+    /*Placement*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+    /*apparence*/
+    width: max(37vw,255px);
+    height: max(37vw,255px);
+}
+
+/* Le svg du radar et son placement*/
 div.radar svg {
     /*apparence*/
     width: max(37vw,350px);
     height: max(37vw,350px);
 }
 
-.radar {
-    /*Placement*/
-    position: absolute;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 100px;
-    
-
+/*apparence de l'avancée de la vie de chqaque hero */
+rect {
     /*apparence*/
-    width: max(37vw,255px);
-    height: max(37vw,255px);
+    fill: var(--neon_blue);
 }
 
 /* La chronologie (les dates 10ans) */
