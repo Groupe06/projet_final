@@ -1,3 +1,4 @@
+/* valeurs générales du header */
 body > div#wrapper > header {
     position: absolute;
     top: 0;
@@ -7,6 +8,7 @@ body > div#wrapper > header {
     color: white;
 
 }
+/* Partie gauche du header : PARTIE PRINCIPALE (reste sur version mobile) */
 body > div#wrapper > header > div#mainHeader {
     position: absolute;
     top: 0;
@@ -15,9 +17,11 @@ body > div#wrapper > header > div#mainHeader {
     width: 583px;/*RESPONSIVE*/
     z-index: 1;
 }
+/* image corrspondant à la partie principal (adaptation à la largeur de la fenêtre) */
 body > div#wrapper > header > div#mainHeader > img {
     width:40vw;
 }
+/* section regroupant tous les éléments présents das le header */
 body > div#wrapper > header > div#mainHeader > div#logoAndNameShield {
     position: absolute;
     top: 0;
@@ -30,40 +34,45 @@ body > div#wrapper > header > div#mainHeader > div#logoAndNameShield {
     font-family: Roboto, sans-serif;
     gap: 15px;/*RESPONSIVE*/
 }
-
+/* imaage du logo du shield du header*/
 body > div#wrapper > header > div#mainHeader> div#logoAndNameShield > img {
     width: max(7vw,75px);
 }
+/* 1er texte : S.H.I.E.L.D */
 body > div#wrapper > header > div#mainHeader> div#logoAndNameShield > div p:nth-child(1) {
     margin-bottom: 3%;
     font-size: max(2vw,20px);
 }
+/* 2nd texte : provate access*/
 body > div#wrapper > header > div#mainHeader  > div#logoAndNameShield > div p:nth-child(2) {
     margin-bottom: max(1.5vw,15px);
     font-size: max(1vw,9px);
     color: rgba(255, 255, 255, 0.575);
 }
-
+/* 3eme texte : SUPERHEROES LIFE EXPECTANCY*/
 body > div#wrapper > header > div#mainHeader  > div#logoAndNameShield > div p:nth-child(3) {
     text-transform: uppercase;
     font-size: max(1.5vw,13px);
     line-height: max(2vw,15px)
 }
 
-
-
+/* Placement général des images qui forment le svg (total 3)*/
 body > div#wrapper > header > img {
     position: absolute;
     top: 0;
     right: 0;
 
 }
+
+/* Placement de la barre horizontale*/
 body > div#wrapper > header > img#midheader {
+    /*placement*/
+    margin-left :50px;
+    /*apparence*/
     width: 100vw;
     max-width: 100%;
     left: 0;
     height:45px;/*RESPONSIVE*/
-    
 
 }
 @media screen and (max-width: 800px) {
