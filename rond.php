@@ -30,7 +30,7 @@
         <img id="gauche" src="assets/barreGauche.png" alt="">
         
         <!-- Bouton Power Off -->
-        <a id="Poweroff" href="landing.html"><img src="assets/PowerOff.svg" alt="Bouton Power Off - Quitter la platerforme"></a>
+        <a id="Poweroff" href="index.html"><img src="assets/PowerOff.svg" alt="Bouton Power Off - Quitter la platerforme"></a>
 
         <!--Cercle radar (fond)-->
         <div class="radar">
