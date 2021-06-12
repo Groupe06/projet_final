@@ -34,7 +34,7 @@ body > div#wrapper > header > div#mainHeader > div#logoAndNameShield {
     font-family: Roboto, sans-serif;
     gap: 15px;/*RESPONSIVE*/
 }
-/* imaage du logo du shield du header*/
+/* image du logo du shield du header*/
 body > div#wrapper > header > div#mainHeader> div#logoAndNameShield > img {
     width: max(7vw,75px);
 }
@@ -75,21 +75,19 @@ body > div#wrapper > header > img#midheader {
     height:45px;/*RESPONSIVE*/
 
 }
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 630px) {
     body > div#wrapper > header > img#buttonheader {
         display: none;
     }
 }
 @media screen and (max-width: 583px) {
     body > div#wrapper > header > div#mainHeader > img {
-        width: 100vw;
-        max-width: 100%;
+        width: max(100vw,365px);
     }
     body > div#wrapper > header > img {
         display: none;
     }
     body > div#wrapper > header > div#mainHeader {
-        width: 100vw;
-        max-width: 100%;
+        width: max(100vw,365px);
     }
 }
