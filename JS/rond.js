@@ -17,7 +17,7 @@ for (var i = 0; i < herosName.length ; i ++){
 
         
 
-        // Sélection de la div (à changer par l'image avec l'update)
+        // Sélection de la div qui contiendra l'image
         var coco = document.querySelector("div.remaining_time")
 
         // Si je trouve dans mon DOM un élément avec la classe visible
@@ -25,12 +25,12 @@ for (var i = 0; i < herosName.length ; i ++){
             
             // Si le dernier élément de ma liste correspond à celui sur lequel je viens de cliquer, alors l'élément ne s'éfface pas
             if (this.id == herosClicked[herosClicked.length-2]) {
-                document.querySelector("div.radar div.remaining_time").classList.toggle("visible")
+                document.querySelector("div#container > div.remaining_time").classList.toggle("visible")
             }
             else {
                 // sinon si je clique sur un nouveau nom de hero
                 //J'atttribue au src de l'image vide dans le DOM le src se trouvant dans ma liste à l'indice corespondant à l'id du hero
-                document.querySelector("div.radar div.remaining_time img").src = herosPhoto[this.id - 1]
+                document.querySelector("div#container > div.remaining_time img").src = herosPhoto[this.id - 1]
                 blink()
             }
             
@@ -38,8 +38,8 @@ for (var i = 0; i < herosName.length ; i ++){
         }
         // Si je n'ai jamais encore cliqué sur le nom d'un héro
         else {
-            document.querySelector("div.radar div.remaining_time").classList.toggle("visible")
-            document.querySelector("div.radar div.remaining_time img").src = herosPhoto[this.id - 1]
+            document.querySelector("div#container > div.remaining_time").classList.toggle("visible")
+            document.querySelector("div#container > div.remaining_time img").src = herosPhoto[this.id - 1]
             blink()
     }
         
@@ -48,9 +48,9 @@ for (var i = 0; i < herosName.length ; i ++){
 function blink() {
     // J'ajoute un petite effet sur le liens renvoyant aux datas utiliser (blink)
     // Afin qu'il se répète à chque clique sur un élément et pas 1 seul fois
-    document.querySelector("div.radar div.remaining_time p.info").classList.toggle("spoiler")
+    document.querySelector("div#container > div.remaining_time p.info").classList.toggle("spoiler")
             setTimeout(function() {
-                document.querySelector("div.radar div.remaining_time p.info").classList.remove("spoiler")
+                document.querySelector("div#container >div.remaining_time p.info").classList.remove("spoiler")
             },1500)
         } 
 }

@@ -210,27 +210,34 @@ rect {
     right: max(6vw,40px);
 }
 
-div.radar div.remaining_time:not(.visible){
+/* Pour rendre visible la photo du hero uniquement au click*/
+div#container > div.remaining_time:not(.visible){
     display: none;
 }
 
-div.radar div.remaining_time {
+div#container > div.remaining_time {
     /*placement*/
     position: absolute;
     display: flex;
+    /* ALEX ____________ à changer pour en enlement flex direction pour afficher côte à côte*/
     flex-direction: column;
+    /* ALEX _____________ à changer car plus besoin de centrer (à voir comment tu prèfères) */
     justify-content: center;
+    /* ALEX _____________ à changer car plus besoin de centrer (à voir comment tu préfères) */
     align-items: center;
     box-sizing: border-box;
+    /* ALEX _____________  A enlever car plus besoin de mettre le disque au dessus */
     z-index: 2;
     /*apparence*/
+    /* ALEX _____________  Ici tout est à changer jusqu'à la fin */
     width: max(25vw,170px);
     height:max(25vw,170px);
     border-radius:100%;
     background-color: rgba(65, 187, 193, 0.3);
     backdrop-filter: blur(5px);
 }
-div.radar div.remaining_time img#hero {
+div#container > div.remaining_time img#hero {
+    /* ALEX _____________  Ici tout est à changer jusqu'à la fin */
     /*placement*/
     position: absolute;
     top: 0;
@@ -239,7 +246,8 @@ div.radar div.remaining_time img#hero {
     width: max(18vw,120px);
     height:max(18vw,120px);
 }
-div.radar div.remaining_time > p {
+div#container > div.remaining_time > p {
+    /* ALEX _____________  Ici tout est à changer jusqu'à la fin */
     /*placement*/
     z-index: 3;
     /*apparence*/
@@ -247,14 +255,16 @@ div.radar div.remaining_time > p {
     font-family: 'zekton';
     font-size: max(1vw,7px);
 }
-div.radar div.remaining_time > p.dDay {
+div#container > div.remaining_time > p.dDay {
+    /* ALEX _____________  Ici tout est à changer jusqu'à la fin (à voir peut-être pas margin) */
     /*apparence*/
     margin-top: 45%;
     margin-bottom:5%;
     font-size: max(2vw,7px);
     background-color: blueviolet;
 }
-div.radar div.remaining_time > p.info {
+div#container > div.remaining_time > p.info {
+    /* ALEX _____________  Ici tout est à changer jusqu'à la fin (à voir peut-être pas margin) */
     /*apparence*/
     border-bottom: 1px white solid;
     cursor: pointer;
@@ -262,7 +272,7 @@ div.radar div.remaining_time > p.info {
     opacity: 1;
 }
 /*Lancement de l'animation au clic */
-div.radar div.remaining_time > p.spoiler {
+div#container > div.remaining_time > p.spoiler {
     animation: spoiler 0.5s linear 0.3s ;
 }
 /*Clignotement du texte qui ouvre la data*/
