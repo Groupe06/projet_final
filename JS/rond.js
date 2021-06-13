@@ -41,6 +41,8 @@ for (var i = 0; i < herosName.length ; i ++){
             document.querySelector("div#container > div.remaining_time").classList.toggle("visible")
             document.querySelector("div#container > div.remaining_time img").src = herosPhoto[this.id - 1]
             blink()
+
+        // ALEX ____________________ Je pense que c'est ici que tu dois enelever la barre de gauche
     }
         
 }
