@@ -14,12 +14,12 @@ body > div#wrapper > header > div#mainHeader {
     top: 0;
     left: 0;
     box-sizing: content-box;
-    width: 583px;/*RESPONSIVE*/
+    width: max(40vw,360px);
     z-index: 1;
 }
 /* image corrspondant à la partie principal (adaptation à la largeur de la fenêtre) */
 body > div#wrapper > header > div#mainHeader > img {
-    width:40vw;
+    width:max(40vw,360px);
 }
 /* section regroupant tous les éléments présents das le header */
 body > div#wrapper > header > div#mainHeader > div#logoAndNameShield {
@@ -72,22 +72,57 @@ body > div#wrapper > header > img#midheader {
     width: 100vw;
     max-width: 100%;
     left: 0;
-    height:45px;/*RESPONSIVE*/
-
+    height:max(3.1vw,27px);
 }
+body > div#wrapper > header > img#buttonheader {
+    /*apparence*/
+    width: max(4.3vw,37px);
+}
+body > div#wrapper > header > a {
+    /*placement*/
+    position: absolute;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*apparence*/
+    width: max(4.3vw,37px);
+    height:max(4.3vw,37px);
+}
+body > div#wrapper > header >  a > img {
+    /*apparence*/
+    width: min(55%,1.6vw);
+}
+
+/* Adaptation pour petits écrans et mobile du header */
+
 @media screen and (max-width: 630px) {
     body > div#wrapper > header > img#buttonheader {
+        /*apparence*/
         display: none;
+    }
+    body > div#wrapper > header > a {
+        /*apparence*/
+        width: max(3.1vw,27px);
+        height:max(3.1vw,27px);
     }
 }
 @media screen and (max-width: 583px) {
+    body > div#wrapper > header > div#mainHeader {
+        /*apparence*/
+        width: max(100vw,365px);
+    }
+
     body > div#wrapper > header > div#mainHeader > img {
+        /*apparence*/
         width: max(100vw,365px);
     }
     body > div#wrapper > header > img {
         display: none;
     }
-    body > div#wrapper > header > div#mainHeader {
-        width: max(100vw,365px);
+
+    body > div#wrapper > header > div#mainHeader> div#logoAndNameShield > img {
+        /*apparence*/
+        width: max(17vw,75px);
     }
 }
