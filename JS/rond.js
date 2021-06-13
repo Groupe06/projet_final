@@ -3,8 +3,11 @@ var herosName = document.querySelectorAll(".radar div.name p")
 var tourHero = document.querySelector("div.radar")
 // Liste dans laquelle nous regrouperons l'id des héros sur lesquels l'utilisateurs aura cliqué
 var herosClicked = []
-// Liste de toute les images des héros
-var herosPhoto = ["assets/DS.svg","assets/SM.svg"]
+// Liste de toute les images des héros (flatdesign)
+/* var herosPhoto = ["assets/DS.svg","assets/SM.svg"] */
+/* V2 avec les images version cartoon */
+var herosPhoto = ["assets/blackwidow.png","assets/thor.png","assets/blackpanthere.png","assets/hulk.png","assets/captainmarvel.png",
+"assets/antman.png","assets/doctorstrange.png","assets/captainamerica.png","assets/ironman.png","assets/spiderman.png"]
 
 // Boucle parcourant la lkste des images des héros
 for (var i = 0; i < herosName.length ; i ++){

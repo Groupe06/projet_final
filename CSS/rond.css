@@ -222,28 +222,27 @@ div#container > div.remaining_time {
     flex-direction: column;
     /* ALEX _____________ à changer car plus besoin de centrer (à voir comment tu prèfères) */
     justify-content: center;
-    /* ALEX _____________ à changer car plus besoin de centrer (à voir comment tu préfères) */
     align-items: center;
     box-sizing: border-box;
     /* ALEX _____________  A enlever car plus besoin de mettre le disque au dessus */
     z-index: 2;
     /*apparence*/
-    /* ALEX _____________  Ici tout est à changer jusqu'à la fin */
-    width: max(25vw,170px);
+    /* Version JOEY V1 */
+    /* width: max(25vw,170px);
     height:max(25vw,170px);
     border-radius:100%;
     background-color: rgba(65, 187, 193, 0.3);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px); */
 }
 div#container > div.remaining_time img#hero {
     /* ALEX _____________  Ici tout est à changer jusqu'à la fin */
     /*placement*/
-    position: absolute;
-    top: 0;
     z-index: 3;
     /*apparence*/
-    width: max(18vw,120px);
-    height:max(18vw,120px);
+    width: 400px;
+    height: 680px;
+/*     width:max(18vw,120px);
+    height:max(18vw,120px); */
 }
 div#container > div.remaining_time > p {
     /* ALEX _____________  Ici tout est à changer jusqu'à la fin */
@@ -260,14 +259,14 @@ div#container > div.remaining_time > p.dDay {
     margin-top: 45%;
     margin-bottom:5%;
     font-size: max(2vw,7px);
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
 }
 div#container > div.remaining_time > p.info {
     /* ALEX _____________  Ici tout est à changer jusqu'à la fin (à voir peut-être pas margin) */
     /*apparence*/
     border-bottom: 1px white solid;
+    margin-bottom: 5em;
     cursor: pointer;
-    
     opacity: 1;
 }
 /*Lancement de l'animation au clic */
@@ -279,7 +278,6 @@ div#container > div.remaining_time > p.spoiler {
     0% {opacity: 0;}
     50% {opacity: 1;}
     100% {opacity: 0;}
-    
 }
 
 a#Poweroff > img {
