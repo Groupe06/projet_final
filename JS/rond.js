@@ -4,6 +4,7 @@ var tourHero = document.querySelector("div.radar")
 // Liste dans laquelle nous regrouperons l'id des héros sur lesquels l'utilisateurs aura cliqué
 var herosClicked = []
 // Liste de toute les images des héros
+// ALEX___________________ Rajoute les images images dans cette liste
 var herosPhoto = ["assets/DS.svg","assets/SM.svg"]
 
 // Boucle parcourant la lkste des images des héros
