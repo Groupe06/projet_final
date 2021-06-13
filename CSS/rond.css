@@ -145,6 +145,7 @@ rect {
     font-family: 'zekton';
     font-size: max(1.5vw,10px);
     color: var(--white);
+    cursor: pointer;
     /*A voir*/
     border-radius: 100%;
     background: radial-gradient(circle, rgba(0,254,255,0.6) 0%, rgba(106, 128, 128, 0.3) 41%,rgba(106, 128, 128, 0)60%);
