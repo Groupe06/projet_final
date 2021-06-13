@@ -216,6 +216,7 @@ div#container > div.remaining_time:not(.visible){
 }
 
 div#container > div.remaining_time {
+    position: relative;
     /*placement*/
     display: flex;
     /* ALEX ____________ à changer pour en enlement flex direction pour afficher côte à côte*/
@@ -234,6 +235,8 @@ div#container > div.remaining_time {
     border-radius:100%;
     background-color: rgba(65, 187, 193, 0.3);
     backdrop-filter: blur(5px);
+    /* Compatibilité Safari */
+    -webkit-backdrop-filter: blur(5px);
 }
 div#container > div.remaining_time img#hero {
     /* ALEX _____________  Ici tout est à changer jusqu'à la fin */
