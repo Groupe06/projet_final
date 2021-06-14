@@ -91,7 +91,8 @@ if($reponse):
         require("cercle2.php");
         $i++;
         
-        
+        //test pour calculer la date de mort pour le compteur
+        $annee_mort = $date + (($date - $data["annee_creation"] + $total_points) /2); 
 
     endwhile; //fin while 
 
