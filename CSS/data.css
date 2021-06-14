@@ -1,0 +1,89 @@
+:root {
+    --bg_color: #353535;
+    --bg_message: rgba(10,10,10,0.5);
+    --border_neon: #00EBEC;
+    --white: #fff;
+}
+body > div#wrapper > div#backgroundData:not(.visible) {
+    display: none;
+}
+
+body > div#wrapper > div#backgroundData {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    z-index:1;
+    backdrop-filter: blur(5px) ;
+    -webkit-backdrop-filter: blur(5px);
+}
+
+body > div#wrapper > div#backgroundData > div#data {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 75vw;
+    height: 75vh;
+    background-color: rgba(0, 0, 0, 0.5); /*A revoir ensemble*/
+    border-left: 2px solid var(--border_neon);
+    border-right: 2px solid var(--border_neon);
+}
+
+body > div#wrapper > div#backgroundData > div#data > header {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+
+    margin-top: 1.5%;
+    width: 100%;
+    color: white;
+    font-family: 'zekton';
+}
+body > div#wrapper > div#backgroundData > div#data > header > div {
+    text-align: center;
+    grid-column-start:  2;
+    justify-self: center;
+
+}
+body > div#wrapper > div#backgroundData > div#data > header > div > p:nth-child(1) {
+    font-size : max(2.5vw,20px);
+}
+body > div#wrapper > div#backgroundData > div#data > header > div > p:nth-child(2) {
+    font-size : max(1.5vw,10px);
+}
+body > div#wrapper > div#backgroundData > div#data > header > img {
+    grid-column-start: 3;
+    grid-row-start: 1;
+    justify-self: end;
+    align-self: start;
+    width: max(1.5vw,15px);
+    margin-right: 4%;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 630px) {
+ 
+}
+@media screen and (max-width: 583px) {
+    body > div#wrapper > header > div#mainHeader {
+        /*apparence*/
+        z-index: 2;
+    }
+    body > div#wrapper > div#backgroundData > div#data {
+        align-self: flex-end;
+        margin-top: 200px;
+        width: 100vw;
+        background-color: rgba(0, 0, 0, 0.8); /*A revoir ensemble*/
+
+    }
+
+}
+@media screen and (max-width: 400px) {
+    body > div#wrapper > div#backgroundData > div#data {
+        height: 80vh;
+    }
+}
