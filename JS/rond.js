@@ -28,10 +28,18 @@ for (var i = 0; i < herosName.length ; i ++){
             
             // Si le dernier élément de ma liste correspond à celui sur lequel je viens de cliquer, alors l'élément ne s'éfface pas
             if (this.id == herosClicked[herosClicked.length-2]) {
+                // Retour à l'état initial
                 document.querySelector("div#container > div.remaining_time").classList.toggle("visible")
+                // Retour à la couleur du rect d'origine
+                document.getElementById("rect" + herosClicked[herosClicked.length - 1]).style.fill = "#00EBEC";
             }
             else {
                 // sinon si je clique sur un nouveau nom de hero
+
+                // Retour à la couleur du précèdant héro séléctionné 
+                document.getElementById("rect" + herosClicked[herosClicked.length - 2]).style.fill = "#00EBEC";
+                // Coloration du néon en rouge - Différenciation 
+                document.getElementById("rect" + herosClicked[herosClicked.length - 1]).style.fill = "#FF0000";
                 //J'atttribue au src de l'image vide dans le DOM le src se trouvant dans ma liste à l'indice corespondant à l'id du hero
                 document.querySelector("div#container > div.remaining_time img").src = herosPhoto[this.id - 1]
                 blink()
@@ -44,6 +52,9 @@ for (var i = 0; i < herosName.length ; i ++){
         else {
             document.querySelector("div#container > div.remaining_time").classList.toggle("visible")
             document.querySelector("div#container > div.remaining_time img").src = herosPhoto[this.id - 1]
+            var id_rect = "rect" + this.id
+            // Coloration du néon en rouge - Différenciation 
+            document.getElementById(id_rect).style.fill = '#FF0000';
             blink()
 
             
