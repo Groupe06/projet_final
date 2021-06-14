@@ -21,6 +21,23 @@
     <!--CSS de la data de chaque héro -->
     <link rel="stylesheet" href="CSS/data.css">
 
+    <style>
+        rect{
+            animation-name: hauteur;
+            animation-duration: 2s;
+            filter: blur(7px);
+        }
+
+        @keyframes hauteur {
+            from {
+                height:0%;
+            }
+            to {
+                height: <?php $emplacement_height ?>;
+            }
+        }
+    </style>
+
 
     <title>Radar</title>
 </head>
