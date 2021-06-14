@@ -129,16 +129,16 @@
 
                 <!-- Nom des héros -->
                 <div class="name">
-                    <p id="1">Hulk</p>   
-                    <p id="2">Captain America</p>
-                    <p id="3">Black Widow</p>
-                    <p id="4">Doctor Strange</p>
-                    <p id="5">Spider Man</p>
-                    <p id="6">Black Panter</p>
-                    <p id="7">Thor</p>
-                    <p id="8">Captain Marvel</p>
-                    <p id="9">Ant Man</p>
-                    <p id="10">Iron Man</p>
+                    <p id="1" value="Black Widow" >Black Widow</p>   
+                    <p id="2" >Thor</p>
+                    <p id="3">Black Panther</p>
+                    <p id="4">Hulk</p>
+                    <p id="5">Captain Marvel</p>
+                    <p id="6">Ant Man</p>
+                    <p id="7">Docter Strange</p>
+                    <p id="8">Captain America</p>
+                    <p id="9">Iron Man</p>
+                    <p id="10">Spiderman</p>
                 </div>
 
             </div>
