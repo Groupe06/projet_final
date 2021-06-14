@@ -110,7 +110,6 @@
                 <?php 
                 
                     require_once("requetes_points.php"); 
-                    var_dump($tableau_svg);
                     for($i=0; $i < count($tableau_svg); $i++){
                         echo $tableau_svg[$i];
                     }
