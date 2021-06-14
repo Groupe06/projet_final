@@ -27,6 +27,9 @@
 <body>
 <?php 
   		require_once("connexion_bdd.php");
+    
+        $date = date("Y");
+        
 		$tableau_svg = []; 
   	?>
 
