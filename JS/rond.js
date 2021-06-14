@@ -18,8 +18,6 @@ for (var i = 0; i < herosName.length ; i ++){
         herosClicked.push(this.id)
         console.log(herosClicked)
 
-        
-
         // Sélection de la div qui contiendra l'image
         var coco = document.querySelector("div.remaining_time")
 
@@ -50,7 +48,7 @@ for (var i = 0; i < herosName.length ; i ++){
 
 function blink() {
     // J'ajoute un petite effet sur le liens renvoyant aux datas utiliser (blink)
-    // Afin qu'il se répète à chque clique sur un élément et pas 1 seul fois
+    // Afin qu'il se répète à chaque clique sur un élément et pas 1 seul fois
     document.querySelector("div#container > div.remaining_time p.info").classList.toggle("spoiler")
             setTimeout(function() {
                 document.querySelector("div#container >div.remaining_time p.info").classList.remove("spoiler")
