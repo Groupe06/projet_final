@@ -1,33 +1,35 @@
 <?php 
-    require_once("views/connexion_bdd.php");
+
+    //problèmes rencontrés : l'affichage des néons ne se mets pas (pas d'apparition non plus dans inspecteur du navigateur)
+    //possibilité que ca vienne du fait que je n'ai pas bloqué les valeurs négatives 
+
+    require_once("connexion_bdd.php");
     
     $date = date("Y");
     echo $date;
+    
 ?>
 
 <html>
 <head>
     <title></title>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="">
     <link rel="stylesheet" href="">
 
     <style>
-        section{
-            width :300px;
-            border: 2px solid black;
-            margin: 40px;
-            padding: 10px;
-        }
+     body{
+        background-color: black;
+     }
     </style>
 </head>
 <body>
     
 
 
-<?php require_once("requetes_points.php"); ?>
-
+<?php
+$tableau_svg = []; 
+require_once("cercle.php"); ?>
 
 
 
