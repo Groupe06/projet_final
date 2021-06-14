@@ -1,6 +1,7 @@
 <?php // VA VERS REQUETS_POINTS
 // décide placement néons
 require_once("fonctions_positions.php");
+$date = date("Y");
 //var_dump($total_points);
 switch ($i){
 
