@@ -24,8 +24,8 @@ body > div#wrapper > div#backgroundData > div#data {
     display: flex;
     align-items: center;
     flex-direction: column;
-    width: 70vw;
-    height:500px;
+    width: 75vw;
+    height: 75vh;
     background-color: rgba(0, 0, 0, 0.5); /*A revoir ensemble*/
     border-left: 2px solid var(--border_neon);
     border-right: 2px solid var(--border_neon);
@@ -39,7 +39,6 @@ body > div#wrapper > div#backgroundData > div#data > header {
     grid-template-rows: 1fr;
 
     margin-top: 1.5%;
-
     width: 100%;
     color: white;
     font-family: 'zekton';
@@ -51,17 +50,40 @@ body > div#wrapper > div#backgroundData > div#data > header > div {
 
 }
 body > div#wrapper > div#backgroundData > div#data > header > div > p:nth-child(1) {
-    font-size : 2.5vw;
+    font-size : max(2.5vw,20px);
 }
 body > div#wrapper > div#backgroundData > div#data > header > div > p:nth-child(2) {
-    font-size : 1.5vw;
+    font-size : max(1.5vw,10px);
 }
 body > div#wrapper > div#backgroundData > div#data > header > img {
     grid-column-start: 3;
     grid-row-start: 1;
     justify-self: end;
     align-self: start;
-    width: 1.5vw;
+    width: max(1.5vw,15px);
     margin-right: 4%;
     cursor: pointer;
+}
+
+@media screen and (max-width: 630px) {
+ 
+}
+@media screen and (max-width: 583px) {
+    body > div#wrapper > header > div#mainHeader {
+        /*apparence*/
+        z-index: 2;
+    }
+    body > div#wrapper > div#backgroundData > div#data {
+        align-self: flex-end;
+        margin-top: 200px;
+        width: 100vw;
+        background-color: rgba(0, 0, 0, 0.8); /*A revoir ensemble*/
+
+    }
+
+}
+@media screen and (max-width: 400px) {
+    body > div#wrapper > div#backgroundData > div#data {
+        height: 80vh;
+    }
 }
