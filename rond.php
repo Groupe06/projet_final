@@ -18,7 +18,6 @@
 </head>
 <body>
 	<?php 
-  		require_once("connexion_bdd.php");
 		$tableau_svg = []; 
   	?>
     <div id="wrapper">
@@ -32,8 +31,10 @@
         <!-- Bouton Power Off -->
         <a id="Poweroff" href="landing.html"><img src="assets/PowerOff.svg" alt="Bouton Power Off - Quitter la platerforme"></a>
 
-        <!--Cercle radar (fond)-->
-        <div class="radar">
+        
+                
+        <?php require_once("connexion_bdd.php");?>
+    
             <svg width="550" height="550" viewBox="0 0 624 623" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <!-- Cercle représentant les années -->
                 <circle cx="310" cy="315" r="5" fill="white" fill-opacity="0.3"/>
@@ -49,16 +50,18 @@
                 <line x1="59.7384" y1="495.153" x2="562.532" y2="129.853" stroke="white" stroke-opacity="0.3" stroke-width="3"/>
                 <line x1="404.608" y1="607.231" x2="212.558" y2="16.1619" stroke="white" stroke-opacity="0.3" stroke-width="3"/>
                 <!-- Barres sur lesquels sont positionnées les "heros" -->
+                <!-- Apport boucle personnages -->
                 <?php 
                 
                 require_once("requetes_points.php"); 
-                var_dump($tableau_svg);
+                //var_dump($tableau_svg);
                 for($i=0; $i < count($tableau_svg); $i++){
                     echo $tableau_svg[$i];
                 }
                 
                 ?>
-            </svg>            
+            </svg> 
+                        
             <!-- Nom des héros -->
             <div class="name">
                 <h2>Black Widow</h2>   
