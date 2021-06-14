@@ -5,7 +5,12 @@ require_once("fonctions_positions.php");
 switch ($i){
 
     case 1 : 
+<<<<<<< Updated upstream
         array_push($tableau_svg,'<rect x="301" y="' . placement_y($i, $data, $date, $total_points) . '" width="18.672" height="' . placement_height($i, $data, $date, $total_points) . '" transform="rotate(162.195 310.153 313.847)" fill="#00EBEC"></rect>');
+=======
+        array_push($tableau_svg,'<rect x="301" y="' . placement_y($i, $data, $date, $total_points) . '" width="18.672" height="' . placement_height($i, $data, $date, $total_points) . '" transform="rotate(162.195 310.153 313.847)" fill="#00EBEC"></rect>' . $data["nom"]);
+        
+>>>>>>> Stashed changes
         break;
 
     case 2 : 
