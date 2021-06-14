@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+          background : url("/assets/fondNoirCarreaux.png") center;
+          background-attachment: fixed;
+          background-size: cover;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          height: 100vh;
+        }
+
+        .glass {
+          position: relative;
+          background: inherit;
+          overflow: hidden;
+          width: 70%;
+          height: 70%;
+          border-radius: 16px;
+          box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3), 
+                      0 6px 20px rgba(0, 0, 0, 0.15);
+          z-index: 1;
+        }
+
+        .glass:before {
+          content: '';
+          position: absolute;
+          background: inherit;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          margin: -20px;
+          box-shadow: inset 0 0 500px rgba(255, 255, 255, .4); 
+          filter: blur(10px);
+          z-index: -1;
+        }
+
+    </style>
+</head>
+<body>
+    
+    <svg width="584" height="161" viewBox="0 0 584 161" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path class="glass" d="M120.626 160L1 44.725V1L583.181 1.20215V44.725L475.517 160H120.626Z" stroke="white" fill="white"/>
+    </svg>
+
+    <label id="Compte"></label>
+    <script type="text/javascript">
+      var Affiche=document.getElementById("Compte");
+      function Rebour() {
+      var date1 = new Date();
+      var date2 = new Date ("Jan 1, 2031 00:00:00");
+      var sec = (date2 - date1) / 1000;
+      var n = 24 * 3600;
+      if (sec > 0) {
+      j = Math.floor (sec / n);
+      h = Math.floor ((sec - (j * n)) / 3600);
+      mn = Math.floor ((sec - ((j * n + h * 3600))) / 60);
+      sec = Math.floor (sec - ((j * n + h * 3600 + mn * 60)));
+      Affiche.innerHTML = j + " j "+ h +" h "+ mn +" min "+ sec + " s";
+      window.status = "Temps restant : " + j +" j "+ h +" h "+ mn +" min "+ sec + " s ";
+      }
+      tRebour=setTimeout ("Rebour();", 1000);
+      }
+      Rebour();
+ </script>
+         
+</body>
+</html>
+    
