@@ -6,23 +6,27 @@ switch ($i){
 
     case 1 : 
         array_push($tableau_svg,'<rect x="301" y="' . placement_y($i, $data, $date, $total_points) . '" width="18.672" height="' . placement_height($i, $data, $date, $total_points) . '" transform="rotate(162.195 310.153 313.847)" fill="#00EBEC"></rect>');
-        
+        echo $data["nom"];
         break;
 
     case 2 : 
         array_push($tableau_svg, '<rect x="301" y="' . placement_y($i, $data, $date, $total_points) . '" width="18.672" height="' . placement_height($i, $data, $date, $total_points) . '" transform="rotate(-161.983 310.153 313.847)" fill="#00EBEC"></rect>');
+        echo $data["nom"];
         break;
 
     case 3 : 
         array_push($tableau_svg,'<rect x="301" y="' . placement_y($i, $data, $date, $total_points) . '" width="18.672" height="' . placement_height($i, $data, $date, $total_points) . '" transform="rotate(54.0612 310.153 313.847)" fill="#00EBEC"></rect>');
+        echo $data["nom"];
         break;
 
     case 4 : 
         array_push($tableau_svg, '<rect x="301" y="' . placement_y($i, $data, $date, $total_points) . '" width="18.672" height="' . placement_height($i, $data, $date, $total_points) . '" transform="rotate(-125.835 310.153 313.847)" fill="#00EBEC"></rect>');
+        echo $data["nom"];
         break;
 
     case 5 : 
         array_push($tableau_svg, '<rect x="301" y="' . placement_y($i, $data, $date, $total_points) . '" width="19.0025" height="' . placement_height($i, $data, $date, $total_points) . '" transform="rotate(-90 310.153 313.847)" fill="#00EBEC"></rect>');
+        echo $data["nom"];
         break;
 
     case 6 : 
