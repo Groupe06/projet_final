@@ -1,5 +1,7 @@
 <!DOCTYPE html>
+
 <html lang="fr">
+
 <head>
     <!--META-->
     <meta charset="UTF-8">
@@ -11,13 +13,22 @@
     <!--Liens CSS-->
     <!-- CSS reset-->
     <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css">
-    <!--CSS de landing & onboarding -->
+
+    <!--CSS gérnéral -->
     <link rel="stylesheet" href="CSS/rond.css">
+    <!--CSS header -->
     <link rel="stylesheet" href="CSS/header.css">
+    <!--CSS de la data de chaque héro -->
+    <link rel="stylesheet" href="CSS/data.css">
+
 
     <title>Radar</title>
 </head>
 <body>
+<?php 
+  		require_once("connexion_bdd.php");
+		$tableau_svg = []; 
+  	?>
 
     <div id="wrapper">
         <!-- Le header avec les iamges --> 
@@ -54,6 +65,7 @@
             Placement de l'image vide ici et du texte (avec le temps restant + V2)-->
                 <div class="remaining_time">
                     <img src="" id="hero" alt="Avengers logo">
+                    <!-- NICO _____________ -->
                     <p class="dDay"><span>000</span>j <span>00</span>h <span>00</span>m <span>00</span>s</p>
                     <p class="info">Découvrir pourquoi ?
                 </div>
@@ -83,6 +95,16 @@
                     <rect x="310.153" y="313.847" width="18.672" height="20" transform="rotate(-53.7143 310.153 313.847)" fill="#00EBEC"/>
                     <rect x="310.153" y="313.847" width="18.672" height="20" transform="rotate(-17.5918 310.153 313.847)" fill="#00EBEC"/>
                     <rect x="310.153" y="313.847" width="18.672" height="20" transform="rotate(18.1438 310.153 313.847)" fill="#00EBEC"/>
+                  <!-- Barres sur lesquels sont positionnées les "heros" -->
+                <?php 
+                
+                require_once("requetes_points.php"); 
+                var_dump($tableau_svg);
+                for($i=0; $i < count($tableau_svg); $i++){
+                    echo $tableau_svg[$i];
+                }
+                
+                ?>
                 </svg>
                 
                 <!--Chronologie-->
@@ -96,7 +118,7 @@
 
                 <!-- Nom des héros -->
                 <div class="name">
-                    <p id="1" >Black Widow</p>   
+                    <p id="1" value="Black Widow" >Black Widow</p>   
                     <p id="2" >Thor</p>
                     <p id="3">Black Panther</p>
                     <p id="4">Hulk</p>
@@ -112,8 +134,30 @@
             
         </div>
 
+        <!--Affichage de la data par super-héro -->
+        <div id="backgroundData">
+            
+            <div id="data">
+
+                <header>
+                    <div id="theHero">
+                        <p></p>
+                        <!-- NICO _____________ -->
+                        <p>2008 - 2024</p>
+                    </div>
+                    <img src="assets/croix.svg" alt=" Croix pour fermer la page de data">
+                </header>
+
+                <div id="allTheData">
+                    <!-- NICO _____________ -->
+                </div>
+            </div>
+
+        </div>
+
        
     </div> 
     <script src="JS/rond.js"></script>
+
 </body>
 </html>
