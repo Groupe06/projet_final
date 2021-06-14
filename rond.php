@@ -57,7 +57,7 @@
         <!-- Le header avec les iamges --> 
         <header>
             <div id="mainHeader">
-                <img src="assets/mainHeader.png" alt="bacground du header de la page">
+                <img src="assets/mainHeader.png" alt="background du header de la page">
                     <div id="logoAndNameShield">
                         <img src="assets/logo_shield.svg" alt="Le logo du shield (marvel) en blanc">
                         <div>
@@ -68,8 +68,7 @@
                         </div>
                     </div>
             </div>
-            <img id="midheader" src="assets/midheader1.png" alt=""> <!-- A REVOIR COULEUR -->
-            <img id="buttonheader" src="assets/buttonheader.png" alt="">
+            <img id="midheader" src="assets/midheader.png" alt=""> <!-- A REVOIR COULEUR -->
             <!-- img renvoyant à landing.html -->
             <a href="landing.html">
                 <img src="assets/PowerOff.svg" alt="bouton power off qui renvoie à l'accueil">
