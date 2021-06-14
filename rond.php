@@ -22,6 +22,9 @@
     <link rel="stylesheet" href="CSS/data.css">
 
     <style>
+        html{
+            background-color: black;
+        }
         rect{
             animation-name: hauteur;
             animation-duration: 2s;
