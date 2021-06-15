@@ -174,7 +174,7 @@
        
     </div> 
     <script src="JS/rond.js"></script>
-    <?=
+    <?php  
     '<script type="text/javascript">
         var Affiche=document.getElementById("dDay");
         function Rebour() {
@@ -194,15 +194,10 @@
         }
         Rebour();
     </script>'; 
-    //require("fonction_affichage.php");
-    $requete_affichage = $bdd->prepare("SELECT * FROM super_heros WHERE super_heros.nom = :nom");
-    $requete_affichage->execute([
-        "nom" => "Ant Man"
-    ]);
+    require("fonction_affichage.php");
+    affichage_personnage($bdd);
 
-    $reponse_affichage = $requete_affichage->fetch(PDO::FETCH_ASSOC);
-    var_dump($reponse_affichage);
-    ?><script>alert(recuperation_nom())</script>
+    ?>
     
 
 
