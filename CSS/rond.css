@@ -254,7 +254,6 @@ div#container > div.remaining_time {
     background-color: rgba(65, 187, 193, 0.3);
     backdrop-filter: blur(5px);
     /* Compatibilité safari */
-    -webkit-backdrop-filter: blur(5px);
 }
 
 div#container > div.remaining_time img#hero {
