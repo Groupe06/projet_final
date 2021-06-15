@@ -21,7 +21,7 @@ for (var i = 0; i < herosName.length ; i ++){
 
         // Pour seul but de récupérer le nom du héro sur lequel l'utilisateur à cliqué
         HerofullName =  this.textContent
-        lolo(HerofullName)
+        recuperation_nom(HerofullName)
 
         // Sélection de la div qui contiendra l'image
 
@@ -94,7 +94,7 @@ function blink() {
     document.querySelector("div#container > div.remaining_time").classList.remove("visible")
     document.querySelector("body > div#wrapper > div#backgroundData").classList.toggle("visible")
     // 2crit dans la fenêtre le nom du héro sur lequel l'utilisateur à cliqué
-    document.querySelector("body > div#wrapper > div#backgroundData > div#data > header > div > p:nth-child(1)").innerHTML = lolo(HerofullName)
+    document.querySelector("body > div#wrapper > div#backgroundData > div#data > header > div > p:nth-child(1)").innerHTML = recuperation_nom(HerofullName)
     closeData()
 
 }
