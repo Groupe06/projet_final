@@ -3,13 +3,14 @@ var herosName = document.querySelectorAll(".radar div.name p")
 var tourHero = document.querySelector("div.radar")
 // Liste dans laquelle nous regrouperons l'id des héros sur lesquels l'utilisateurs aura cliqué
 var herosClicked = []
+
 // Liste de toute les images des héros (flatdesign)
 /* var herosPhoto = ["assets/DS.svg","assets/SM.svg"] */
 /* V2 avec les images version cartoon */
 var herosPhoto = ["assets/hulk.png", "assets/captainamerica.png", "assets/blackwidow.png", "assets/doctorstrange.png", "assets/spiderman.png", "assets/blackpanthere.png", "assets/thor.png","assets/captainmarvel.png",
 "assets/antman.png","assets/ironman.png"]
 
-// Boucle parcourant la lkste des images des héros
+// Boucle parcourant la liste des images des héros
 for (var i = 0; i < herosName.length ; i ++){
     // Activation d'une action au clic
     herosName[i].onclick = function() {
@@ -23,9 +24,11 @@ for (var i = 0; i < herosName.length ; i ++){
         lolo(HerofullName)
 
         // Sélection de la div qui contiendra l'image
-         var myHeroRemainingTime = document.querySelector("div.remaining_time")
 
-          // Si je trouve dans mon DOM un élément avec la classe visible
+        var myHeroRemainingTime = document.querySelector("div.remaining_time")
+
+        // Si je trouve dans mon DOM un élément avec la classe visible
+
         if (myHeroRemainingTime.className.match("visible")) {
             
             // Si le dernier élément de ma liste correspond à celui sur lequel je viens de cliquer, alors l'élément ne s'éfface pas
@@ -68,11 +71,12 @@ for (var i = 0; i < herosName.length ; i ++){
         
 }
 
-	// Pour seul but de récupérer le nom du héro sur lequel l'utilisateur à cliqué	
-    function lolo(HerofullName) {	
-        return HerofullName	
-    }	
-    }
+// Pour seul but de récupérer le nom du héro sur lequel l'utilisateur à cliqué
+function lolo(HerofullName) {
+    return HerofullName
+}
+
+}
 
 function blink() {
     // J'ajoute un petite effet sur le liens renvoyant aux datas utiliser (blink)
@@ -82,6 +86,7 @@ function blink() {
                 document.querySelector("div#container >div.remaining_time p.info").classList.remove("spoiler")
             },1500)
         } 
+
 
 
 // Fonction permettant de visualiser toutes la data autour d'un hero

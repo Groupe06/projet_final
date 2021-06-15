@@ -9,7 +9,7 @@
 
 @font-face {
     font-family: 'zekton';
-    src: url('/assets/Fonts/zekton-webfont.woff') format('woff2'),
+    src: url('/assets/Fonts/zekton-webfont.woff2') format('woff2'),
     url('/assets/Fonts/zekton-webfont.woff') format('woff');
     font-weight: normal;
     font-style: normal;
@@ -51,6 +51,7 @@ body > div#wrapper > img#gauche {
     /*apparence*/
     height:80vh;
 }
+
 
 
 /* ALEX_________  Au si besoin de faire des modifs*/
@@ -150,6 +151,9 @@ rect {
     font-family: 'zekton';
     font-size: max(1.5vw,10px);
     color: var(--white);
+
+    cursor: pointer;
+
     /*A voir*/
     border-radius: 100%;
     background: radial-gradient(circle, rgba(0,254,255,0.6) 0%, rgba(106, 128, 128, 0.3) 41%,rgba(106, 128, 128, 0)60%);
@@ -213,6 +217,7 @@ rect {
 .radar p:nth-child(10) {
     bottom: max(18vw,130px);
     right: max(6vw,40px);
+
 }
 
 /* Pour rendre visible la photo du hero uniquement au click*/
@@ -221,6 +226,17 @@ div#container > div.remaining_time:not(.visible){
 }
 
 div#container > div.remaining_time {
+
+}
+
+/* Pour rendre visible la photo du hero uniquement au click*/
+div#container > div.remaining_time:not(.visible){
+    display: none;
+}
+
+div#container > div.remaining_time {
+    position: relative;
+
     /*placement*/
     display: flex;
     flex-direction: column;
@@ -236,9 +252,11 @@ div#container > div.remaining_time {
     height:max(25vw,170px);
     border-radius:100%;
     background-color: rgba(65, 187, 193, 0.3);
-    backdrop-filter: blur(5px); */
-
+    backdrop-filter: blur(5px);
+    /* Compatibilité safari */
+    -webkit-backdrop-filter: blur(5px);
 }
+
 div#container > div.remaining_time img#hero {
     /* ALEX _____________  Ici tout est à changer jusqu'à la fin */
     /*placement*/
@@ -264,7 +282,9 @@ div#container > div.remaining_time > div.info_time {
     margin-right: 5em;
 }
 
+
 div#container > div.remaining_time > div.info_time > p#dDay {
+
     /* ALEX _____________  Ici tout est à changer jusqu'à la fin (à voir peut-être pas margin) */
     /*apparence*/
     white-space: nowrap;
@@ -303,8 +323,8 @@ a#Poweroff > img {
     text-align: center;
 }
 
-@media screen and (max-width: 500px) {
 
+@media screen and (max-width: 530px) {
     body > div#wrapper > img#gauche {
         display: none;
     }
