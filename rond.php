@@ -154,7 +154,7 @@
                     <!-- Titre + années -->
                     <div id="theHero">
                         <p></p>
-                        <p>2008 - 2024</p>
+                        <p>2008 - 2024</p> <!-- Todo PHP !-->
                     </div>
                     <img src="assets/croix.svg" alt=" Croix pour fermer la page de data">
                 </header>
@@ -167,20 +167,23 @@
                         <span>entre les films</span>
                     </div>
 
-    
+                    <div id="barContainer">
+                    <canvas id="barChart"></canvas>
+                    </div>
 
+                    <div id="envieContinuer">
+                        <span>L'acteur a t'il envie de continuer</span>
+                        <h2></h2> <!-- TODO PHP !-->
+                    </div>
 
- <div id="container">
-  <canvas id="myChart"></canvas>
-</div>
+                    <div id="apparition">
+                        <h2>12<h2> <!-- Todo PHP !-->
+                        <span>Années passées depuis sa première apparition</span>
+                    </div>
 
-   
-
-                    <div id="envieContinuer"></div>
-
-                    <div id="premiereApparition"></div>
-
-                    <div id="doughnutNbFilm"></div>
+                    <div id="doughnutContainer">
+                        <canvas id="doughnut"></canvas>
+                    </div>
 
 
                     

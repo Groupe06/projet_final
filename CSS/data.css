@@ -11,8 +11,12 @@ span {
 }
 
 
-#container{
-    width: 800px;
+#doughnutContainer{
+    width: 500px;
+}
+
+#barChart {
+    width: 500px;
 }
 
 
