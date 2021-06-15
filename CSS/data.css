@@ -10,6 +10,13 @@ span {
     color: white;
 }
 
+
+#container{
+    width: 800px;
+}
+
+
+
 body > div#wrapper > div#backgroundData:not(.visible) {
     display: none;
 }

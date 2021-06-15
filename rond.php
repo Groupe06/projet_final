@@ -167,7 +167,14 @@
                         <span>entre les films</span>
                     </div>
 
-                    <div id="barSalaire"></div>
+    
+
+
+ <div id="container">
+  <canvas id="myChart"></canvas>
+</div>
+
+   
 
                     <div id="envieContinuer"></div>
 
@@ -237,4 +244,8 @@
 
 
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.0/Chart.bundle.js"></script>
+<script src="JS/Chart.Js"></script>
+
+
 </html>
