@@ -151,15 +151,43 @@
             <div id="data">
 
                 <header>
+                    <!-- Titre + années -->
                     <div id="theHero">
                         <p></p>
-
-                        <!-- NICO _____________ -->
-
-                        <p>2008 - 2024</p>
+                        <p>2008 - 2024</p> <!-- Todo PHP !-->
                     </div>
                     <img src="assets/croix.svg" alt=" Croix pour fermer la page de data">
                 </header>
+
+                <main>
+
+                    <div id="augmentation">
+                        <span>Augmentation moyenne du salaire</span>
+                        <h2></h2> <!-- TODO PHP !-->
+                        <span>entre les films</span>
+                    </div>
+
+                    <div id="barContainer">
+                    <canvas id="barChart"></canvas>
+                    </div>
+
+                    <div id="envieContinuer">
+                        <span>L'acteur a t'il envie de continuer</span>
+                        <h2></h2> <!-- TODO PHP !-->
+                    </div>
+
+                    <div id="apparition">
+                        <h2>12<h2> <!-- Todo PHP !-->
+                        <span>Années passées depuis sa première apparition</span>
+                    </div>
+
+                    <div id="doughnutContainer">
+                        <canvas id="doughnut"></canvas>
+                    </div>
+
+
+                    
+                
 
                 <div id="allTheData">
 
@@ -219,4 +247,8 @@
 
 
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.0/Chart.bundle.js"></script>
+<script src="JS/Chart.Js"></script>
+
+
 </html>

@@ -4,6 +4,23 @@
     --border_neon: #00EBEC;
     --white: #fff;
 }
+
+span {
+    font-family: 'zekton';
+    color: white;
+}
+
+
+#doughnutContainer{
+    width: 500px;
+}
+
+#barChart {
+    width: 500px;
+}
+
+
+
 body > div#wrapper > div#backgroundData:not(.visible) {
     display: none;
 }
