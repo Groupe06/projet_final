@@ -260,8 +260,7 @@ div#container > div.remaining_time > div.info_time {
     font-size: max(1vw,7px);
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    margin-right: 5em;
 }
 
 div#container > div.remaining_time > div.info_time > p.dDay {
@@ -332,5 +331,15 @@ a#Poweroff > img {
     div#container > div.remaining_time > div.info_time > p.dDay {
         font-size: 2em;
         margin-top: 2em;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    div#container > div.remaining_time {
+        margin-right: 0;
+    }
+
+    div#container > div.remaining_time img#hero {
+        margin-top: 0;
     }
 }
