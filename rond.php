@@ -132,7 +132,7 @@
                 <!-- Nom des héros -->
                 <div class="name">
 
-                    <form method="post">
+                    <!-- <form method="post">
                         <p><button id="1" class="nom" value="Hulk">Hulk</button></p>
                         <p><button id="2" class="nom" value="Captain America">Captain America</button><p>
                         <button id="3" class="nom" value="Black Widow">Black Widow</button>
@@ -143,7 +143,7 @@
                         <button id="8" class="nom" value="Captain Marvel">Captain Marvel</button>
                         <button id="9" class="nom" value="Ant Man">Ant Man</button>
                         <button id="10" class="nom" value="Iron Man">Iron Man</button>
-                    </form>
+                    </form> -->
 
 
 
