@@ -4,6 +4,12 @@
     --border_neon: #00EBEC;
     --white: #fff;
 }
+
+span {
+    font-family: 'zekton';
+    color: white;
+}
+
 body > div#wrapper > div#backgroundData:not(.visible) {
     display: none;
 }

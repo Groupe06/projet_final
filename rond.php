@@ -151,15 +151,33 @@
             <div id="data">
 
                 <header>
+                    <!-- Titre + années -->
                     <div id="theHero">
                         <p></p>
-
-                        <!-- NICO _____________ -->
-
                         <p>2008 - 2024</p>
                     </div>
                     <img src="assets/croix.svg" alt=" Croix pour fermer la page de data">
                 </header>
+
+                <main>
+
+                    <div id="augmentation">
+                        <span>Augmentation moyenne du salaire</span>
+                        <h2></h2> <!-- TODO PHP !-->
+                        <span>entre les films</span>
+                    </div>
+
+                    <div id="barSalaire"></div>
+
+                    <div id="envieContinuer"></div>
+
+                    <div id="premiereApparition"></div>
+
+                    <div id="doughnutNbFilm"></div>
+
+
+                    
+                
 
                 <div id="allTheData">
 
