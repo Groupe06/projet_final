@@ -46,11 +46,14 @@
 </head>
 <body>
 <?php 
+        //connexion bdd
   		require_once("connexion_bdd.php");
-    
+        
+        //creation prise annee actuelle
         $date = date("Y");
         
 		$tableau_svg = []; 
+        
   	?>
 
     <div id="wrapper">
@@ -171,11 +174,12 @@
        
     </div> 
     <script src="JS/rond.js"></script>
-    <script type="text/javascript">
+    <?=
+    '<script type="text/javascript">
         var Affiche=document.getElementById("dDay");
         function Rebour() {
             var date1 = new Date();
-            var date2 = new Date ("Jan 1, 2031 00:00:00");
+            var date2 = ' . ($date + ( $date - $data["annee_creation"] + $total_points)) / 2 . ';
             var sec = (date2 - date1) / 1000;
             var n = 24 * 3600;
             if (sec > 0) {
@@ -189,7 +193,9 @@
             tRebour = setTimeout ("Rebour();", 1000);
         }
         Rebour();
-    </script>
+    </script>'; 
+    require("fonction_affichage.php");
+    affichage_personnage();?>
 
 </body>
 </html>
