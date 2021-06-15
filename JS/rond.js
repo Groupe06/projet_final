@@ -72,7 +72,7 @@ for (var i = 0; i < herosName.length ; i ++){
 }
 
 // Pour seul but de récupérer le nom du héro sur lequel l'utilisateur à cliqué
-function lolo(HerofullName) {
+function recuperation_nom(HerofullName) {
     return HerofullName
 }
 

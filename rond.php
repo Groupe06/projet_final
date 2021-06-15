@@ -202,7 +202,8 @@
 
     $reponse_affichage = $requete_affichage->fetch(PDO::FETCH_ASSOC);
     var_dump($reponse_affichage);
-    //affichage_personnage();?>
+    ?><script>alert(recuperation_nom())</script>
+    
 
 
 </body>
