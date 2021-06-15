@@ -194,8 +194,15 @@
         }
         Rebour();
     </script>'; 
-    require("fonction_affichage.php");
-    affichage_personnage();?>
+    //require("fonction_affichage.php");
+    $requete_affichage = $bdd->prepare("SELECT * FROM super_heros WHERE super_heros.nom = :nom");
+    $requete_affichage->execute([
+        "nom" => "Ant Man"
+    ]);
+
+    $reponse_affichage = $requete_affichage->fetch(PDO::FETCH_ASSOC);
+    var_dump($reponse_affichage);
+    //affichage_personnage();?>
 
 
 </body>
