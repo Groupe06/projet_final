@@ -38,24 +38,7 @@
             }
         }
     </style>
-    <title>Radar</title>
-</head>
-<?php 
-        require_once("connexion_bdd.php");
     
-        $date = date("Y");
-        
-		$tableau_svg = []; 
-?>
-<body>
-
-    <div id="wrapper">
-        <!-- Le header avec les images --> 
-        <header>
-            <div id="mainHeader">
-                <img src="assets/mainHeader.png" alt="background du header de la page">
-
-
     <title>Radar</title>
 </head>
 <body>
@@ -91,17 +74,7 @@
             <a href="index.html">
                 <img src="assets/PowerOff.svg" alt="bouton power off qui renvoie à l'accueil">
             </a>
-        </header>
-        
-        <!-- élément de gauche (fond) -->
-
-        <!-- <img id="gauche" src="assets/barreGauche.png" alt=""> -->
-
-        <img id="gauche" src="assets/barreGauche.png" alt="">
-        
-
-
-        
+        </header>    
 
         <!-- Créàation du responsive avec l'affichage des images des superheroes-->
         <div id="container">
