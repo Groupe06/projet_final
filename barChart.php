@@ -4,7 +4,11 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title></title>
-  <?php require_once("connexion_bdd.php"); ?>
+  
+  <?php 
+    //connexion à la bdd
+    require_once("connexion_bdd.php"); 
+  ?>
 </head>
 
 <style>
