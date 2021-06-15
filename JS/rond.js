@@ -5,8 +5,6 @@ var tourHero = document.querySelector("div.radar")
 var herosClicked = []
 
 // Liste de toute les images des héros (flatdesign)
-/* var herosPhoto = ["assets/DS.svg","assets/SM.svg"] */
-/* V2 avec les images version cartoon */
 var herosPhoto = ["assets/hulk.png", "assets/captainamerica.png", "assets/blackwidow.png", "assets/doctorstrange.png", "assets/spiderman.png", "assets/blackpanthere.png", "assets/thor.png","assets/captainmarvel.png",
 "assets/antman.png","assets/ironman.png"]
 
@@ -72,7 +70,7 @@ for (var i = 0; i < herosName.length ; i ++){
 }
 
 // Pour seul but de récupérer le nom du héro sur lequel l'utilisateur à cliqué
-function lolo(HerofullName) {
+function lolo() {
     return HerofullName
 }
 
@@ -94,7 +92,7 @@ function blink() {
     document.querySelector("div#container > div.remaining_time").classList.remove("visible")
     document.querySelector("body > div#wrapper > div#backgroundData").classList.toggle("visible")
     // 2crit dans la fenêtre le nom du héro sur lequel l'utilisateur à cliqué
-    document.querySelector("body > div#wrapper > div#backgroundData > div#data > header > div > p:nth-child(1)").innerHTML = lolo(HerofullName)
+    document.querySelector("body > div#wrapper > div#backgroundData > div#data > header > div > p:nth-child(1)").innerHTML = HerofullName
     closeData()
 
 }

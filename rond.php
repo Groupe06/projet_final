@@ -88,7 +88,7 @@
                 </div>
                 <img src="#" id="hero" alt="Avengers logo">
             </div>
-
+            
             <!--Cercle radar (fond)-->
             <div class="radar">
                 <svg width="550" height="623" viewBox="0 0 624 623" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -127,7 +127,6 @@
 
                 <!-- Nom des héros -->
                 <div class="name">
-
                     <p id="1">Hulk</p>
                     <p id="2">Captain America</p>
                     <p id="3">Black Widow</p>   
@@ -138,7 +137,6 @@
                     <p id="8">Captain Marvel</p>
                     <p id="9">Ant Man</p>
                     <p id="10">Iron Man</p>
-
                 </div>
 
             </div>

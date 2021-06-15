@@ -70,6 +70,7 @@ body > div#wrapper > div#container {
     max-width: 100%;
     /* height : calc(100vh - 163px); */ /* Pour pas que le radar passe en dessous du header (à revoir avec le reponsive */
     max-height: 100%;
+    margin-bottom: 20px;
 }
 
 
@@ -220,14 +221,6 @@ rect {
 
 }
 
-/* Pour rendre visible la photo du hero uniquement au click*/
-div#container > div.remaining_time:not(.visible){
-    display: none;
-}
-
-div#container > div.remaining_time {
-
-}
 
 /* Pour rendre visible la photo du hero uniquement au click*/
 div#container > div.remaining_time:not(.visible){
@@ -351,6 +344,11 @@ a#Poweroff > img {
     div#container > div.remaining_time > div.info_time > p.dDay {
         font-size: 2em;
         margin-top: 2em;
+    }
+    body > div#wrapper > div#container {
+        align-items: baseline;
+        margin-top: 20px;
+        margin-bottom:0;
     }
 }
 
