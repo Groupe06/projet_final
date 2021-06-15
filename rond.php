@@ -148,7 +148,7 @@
 
 
 
-                    <!-- <p id="1">Hulk</p>   
+                    <p id="1">Hulk</p>   
                     <p id="2" >Captain America</p>
                     <p id="3">Black Widow</p>
                     <p id="4">Doctor Strange</p>
@@ -157,7 +157,7 @@
                     <p id="7">Thor</p>
                     <p id="8">Captain Marvel</p>
                     <p id="9">Ant Man</p>
-                    <p id="10">Iron Man</p> -->
+                    <p id="10">Iron Man</p> 
                 </div>
 
             </div>
