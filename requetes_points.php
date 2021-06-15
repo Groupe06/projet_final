@@ -11,6 +11,11 @@ if($reponse):
     // tant que tous les personnages ne sont pas passés 
     while ($data = $reponse->fetch()):
         
+
+
+
+
+
         // début comptage points anciennetée :
 
         //si vivant :
