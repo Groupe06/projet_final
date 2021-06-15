@@ -133,8 +133,8 @@
                 <div class="name">
 
                     <form method="post">
-                        <button id="1" class="nom" value="Hulk">Hulk</button>
-                        <button id="2" class="nom" value="Captain America">Captain America</button>
+                        <p><button id="1" class="nom" value="Hulk">Hulk</button></p>
+                        <p><button id="2" class="nom" value="Captain America">Captain America</button><p>
                         <button id="3" class="nom" value="Black Widow">Black Widow</button>
                         <button id="4" class="nom" value="Doctor Strange">Doctor Strange</button>
                         <button id="5" class="nom" value="Spider Man">Spider Man</button>
