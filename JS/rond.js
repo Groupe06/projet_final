@@ -7,7 +7,7 @@ var herosClicked = []
 // ALEX___________________ Rajoute les images images dans cette liste
 var herosPhoto = ["assets/DS.svg","assets/SM.svg"]
 
-// Boucle parcourant la lkste des images des héros
+// Boucle parcourant la liste des images des héros
 for (var i = 0; i < herosName.length ; i ++){
     // Activation d'une action au clic
     herosName[i].onclick = function() {
@@ -88,6 +88,5 @@ function closeData() {
     document.querySelector("body > div#wrapper > div#backgroundData > div#data > header > img").onclick = function () {
         document.querySelector("body > div#wrapper > div#backgroundData").classList.remove("visible")
         document.querySelector("div#container > div.remaining_time").classList.toggle("visible")
-        
     }
 }

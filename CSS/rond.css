@@ -274,7 +274,7 @@ div#container > div.remaining_time > p {
     font-family: 'zekton';
     font-size: max(1vw,7px);
 }
-div#container > div.remaining_time > p.dDay {
+div#container > div.remaining_time > p#dDay {
     /* ALEX _____________  Ici tout est à changer jusqu'à la fin (à voir peut-être pas margin) */
     /*apparence*/
     margin-top: 45%;
@@ -287,7 +287,6 @@ div#container > div.remaining_time > p.info {
     /*apparence*/
     border-bottom: 1px white solid;
     cursor: pointer;
-    
     opacity: 1;
 }
 /*Lancement de l'animation au clic */
