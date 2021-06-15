@@ -3,7 +3,7 @@
 <head>
     <!--META-->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0 scalable=yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Liens des fonts-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -14,9 +14,36 @@
     <!--CSS de landing & onboarding -->
     <link rel="stylesheet" href="CSS/rond.css">
     <link rel="stylesheet" href="CSS/header.css">
+     <!--CSS de la data de chaque héro -->
+    <link rel="stylesheet" href="CSS/data.css">
+<style>
+        html{
+            background-color: black;
+        }
+        rect{
+            animation-name: hauteur;
+            animation-duration: 2s;
+            filter: blur(7px);
+        }
 
+        @keyframes hauteur {
+            from {
+                height:0%;
+            }
+            to {
+                height: <?php $emplacement_height ?>;
+            }
+        }
+    </style>
     <title>Radar</title>
 </head>
+<?php 
+        require_once("connexion_bdd.php");
+    
+        $date = date("Y");
+        
+		$tableau_svg = []; 
+?>
 <body>
 
     <div id="wrapper">
@@ -34,10 +61,9 @@
                         </div>
                     </div>
             </div>
-            <img id="midheader" src="assets/midheader1.png" alt=""> <!-- A REVOIR COULEUR -->
-            <img id="buttonheader" src="assets/buttonheader.png" alt="">
+            <img id="midheader" src="assets/midheader.png" alt=""> <!-- A REVOIR COULEUR -->
             <!-- img renvoyant à landing.html -->
-            <a href="landing.html">
+            <a href="index.html">
                 <img src="assets/PowerOff.svg" alt="bouton power off qui renvoie à l'accueil">
             </a>
         </header>
@@ -52,7 +78,7 @@
             Placement de l'image vide ici et du texte (avec le temps restant + V2)-->
             <div class="remaining_time">
                 <div class="info_time">
-                    <p class="dDay"><span>000</span>j <span>00</span>h <span>00</span>m <span>00</span>s</p>
+                    <p id="dDay"><span>000</span>j <span>00</span>h <span>00</span>m <span>00</span>s</p>
                     <p class="info">Découvrir pourquoi ?</p>
                 </div>
                 <img src="#" id="hero" alt="Avengers logo">
@@ -74,15 +100,14 @@
                     <line x1="59.7384" y1="495.153" x2="562.532" y2="129.853" stroke="white" stroke-opacity="0.3" stroke-width="3"/>
                     <line x1="404.608" y1="607.231" x2="212.558" y2="16.1619" stroke="white" stroke-opacity="0.3" stroke-width="3"/>
                     <!-- Barres sur lesquels sont positionnées les "heros" -->
-                    <rect x="310.153" y="313.847" width="18.672" height="20" transform="rotate(162.195 310.153 313.847)" fill="#00EBEC"/>
-                    <rect x="310.153" y="313.847" width="18.672" height="20" transform="rotate(-161.983 310.153 313.847)" fill="#00EBEC"/>
-                    <rect x="310.153" y="313.847" width="18.672" height="20" transform="rotate(54.0612 310.153 313.847)" fill="#00EBEC"/>
-                    <rect x="310.153" y="313.847" width="18.672" height="20" transform="rotate(-125.835 310.153 313.847)" fill="#00EBEC"/>
-                    <rect x="350.153" y="313.844" width="18.672" height="20" transform="rotate(90 330.153 294.844)" fill="#00EBEC"/>
-                    <rect x="310.153" y="313.847" width="18.672" height="20" transform="rotate(125.964 310.153 313.847)" fill="#00EBEC"/>
-                    <rect x="310.153" y="313.847" width="18.672" height="20" transform="rotate(-53.7143 310.153 313.847)" fill="#00EBEC"/>
-                    <rect x="310.153" y="313.847" width="18.672" height="20" transform="rotate(-17.5918 310.153 313.847)" fill="#00EBEC"/>
-                    <rect x="310.153" y="313.847" width="18.672" height="20" transform="rotate(18.1438 310.153 313.847)" fill="#00EBEC"/>
+                    <?php 
+                
+                    require_once("requetes_points.php"); 
+                    for($i=0; $i < count($tableau_svg); $i++){
+                        echo $tableau_svg[$i];
+                    }
+                
+                ?>
                 </svg>
                 
                 <!--Chronologie-->
@@ -96,16 +121,17 @@
 
                 <!-- Nom des héros -->
                 <div class="name">
-                    <p id="1">Black Widow</p>   
-                    <p id="2">Thor</p>
-                    <p id="3">Black Panther</p>
-                    <p id="4">Hulk</p>
-                    <p id="5">Captain Marvel</p>
-                    <p id="6">Ant Man</p>
-                    <p id="7">Docter Strange</p>
-                    <p id="8">Captain America</p>
-                    <p id="9">Iron Man</p>
-                    <p id="10">Spiderman</p>
+                    <p id="1">Hulk</p>
+                    <p id="2">Captain America</p>
+                    <p id="3">Black Widow</p>   
+                    <p id="4">Doctor Strange</p>
+                    <p id="5">Spiderman</p>
+                    <p id="6">Black Panther</p>
+                    <p id="7">Thor</p>
+                    <p id="8">Captain Marvel</p>
+                    <p id="9">Ant Man</p>
+                    <p id="10">Iron Man</p>
+                    
                 </div>
 
             </div>

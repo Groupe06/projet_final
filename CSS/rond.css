@@ -146,6 +146,7 @@ rect {
     position: absolute;
 
     /*apparence*/
+    cursor: pointer;
     font-family: 'zekton';
     font-size: max(1.5vw,10px);
     color: var(--white);
@@ -263,7 +264,7 @@ div#container > div.remaining_time > div.info_time {
     margin-right: 5em;
 }
 
-div#container > div.remaining_time > div.info_time > p.dDay {
+div#container > div.remaining_time > div.info_time > p#dDay {
     /* ALEX _____________  Ici tout est à changer jusqu'à la fin (à voir peut-être pas margin) */
     /*apparence*/
     white-space: nowrap;
