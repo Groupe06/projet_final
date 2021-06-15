@@ -10,11 +10,6 @@ if($reponse):
 
     // tant que tous les personnages ne sont pas passés 
     while ($data = $reponse->fetch()):
-        
-
-
-
-
 
         // début comptage points anciennetée :
 
@@ -50,15 +45,11 @@ if($reponse):
         // endif;
 
 
-
-
-        // section films totaux     
-        $points_totaux_films =12.5 - $data["nombre_films_totaux"] * 1.25;
-
         //si point < 0 
         // if( $points_totaux_films < 0 ):
         //     $points_totaux_films = 0;
         // endif;
+
 
 
 
@@ -96,8 +87,7 @@ if($reponse):
         require("cercle2.php");
         $i++;
         
-        //test pour calculer la date de mort pour le compteur
-        $annee_mort = $date + (($date - $data["annee_creation"] + $total_points) /2); 
+
 
     endwhile; //fin while 
 

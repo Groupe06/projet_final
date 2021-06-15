@@ -61,12 +61,14 @@ body > div#wrapper > div#container {
     position: absolute;
     display: flex;
     flex-wrap: wrap-reverse;/*pour renvoyer l'image en bas en bas au responsive*/
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     align-content: space-around;
+    /* overflow: hidden; */
+    margin: 0 auto;
     width: 100vw;
     max-width: 100%;
-    height : calc(100vh - 163px); /* Pour pas que le radar passe en dessous du header (à revoir avec le reponsive */
+    /* height : calc(100vh - 163px); */ /* Pour pas que le radar passe en dessous du header (à revoir avec le reponsive */
     max-height: 100%;
 }
 
@@ -77,7 +79,8 @@ div#container > div.radar {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 100px;
+    margin-top: 5em;
+    /* margin-right: 1vw; */
     /*apparence*/
     width: max(37vw,255px);
     height: max(37vw,255px);
@@ -90,7 +93,7 @@ div.radar svg {
     height: max(37vw,350px);
 }
 
-/*apparence de l'avancée de la vie de chqaque hero */
+/*apparence de l'avancée de la vie de chaque hero */
 rect {
     /*apparence*/
     fill: var(--neon_blue);
@@ -138,11 +141,13 @@ rect {
 .radar div.name {
     position: absolute;
 }
+
 .radar div.name > p {
     /*position*/
     position: absolute;
 
     /*apparence*/
+    cursor: pointer;
     font-family: 'zekton';
     font-size: max(1.5vw,10px);
     color: var(--white);
@@ -234,38 +239,37 @@ div#container > div.remaining_time {
 
     /*placement*/
     display: flex;
-    /* ALEX ____________ à changer pour en enlement flex direction pour afficher côte à côte*/
     flex-direction: column;
     /* ALEX _____________ à changer car plus besoin de centrer (à voir comment tu prèfères) */
-    justify-content: center;
-    /* ALEX _____________ à changer car plus besoin de centrer (à voir comment tu préfères) */
+    justify-content: space-between;
     align-items: center;
     box-sizing: border-box;
-    /* ALEX _____________  A enlever car plus besoin de mettre le disque au dessus */
     z-index: 2;
+    margin-right: 7.5vw;
     /*apparence*/
-    /* ALEX _____________  Ici tout est à changer jusqu'à la fin */
-    width: max(25vw,170px);
+    /* Version JOEY V1 */
+    /* width: max(25vw,170px);
     height:max(25vw,170px);
     border-radius:100%;
     background-color: rgba(65, 187, 193, 0.3);
     backdrop-filter: blur(5px);
-
     /* Compatibilité safari */
     -webkit-backdrop-filter: blur(5px);
-
 }
+
 div#container > div.remaining_time img#hero {
     /* ALEX _____________  Ici tout est à changer jusqu'à la fin */
     /*placement*/
-    position: absolute;
-    top: 0;
     z-index: 3;
     /*apparence*/
-    width: max(18vw,120px);
-    height:max(18vw,120px);
+    width: auto;
+    /* vh pour s'adapter aux plus petits écrans */
+    height: 65vh;
+    margin-right: 2em;
+    /*     width:max(18vw,120px);
+    height:max(18vw,120px); */
 }
-div#container > div.remaining_time > p {
+div#container > div.remaining_time > div.info_time {
     /* ALEX _____________  Ici tout est à changer jusqu'à la fin */
     /*placement*/
     z-index: 3;
@@ -273,24 +277,34 @@ div#container > div.remaining_time > p {
     color: var(--white);
     font-family: 'zekton';
     font-size: max(1vw,7px);
+    display: flex;
+    flex-direction: column;
+    margin-right: 5em;
 }
-div#container > div.remaining_time > p#dDay {
+
+
+div#container > div.remaining_time > div.info_time > p#dDay {
+
     /* ALEX _____________  Ici tout est à changer jusqu'à la fin (à voir peut-être pas margin) */
     /*apparence*/
-    margin-top: 45%;
-    margin-bottom:5%;
+    white-space: nowrap;
+    margin-top: 8em;
+    margin-bottom: 0.5em;
     font-size: max(2vw,7px);
-    background-color: blueviolet;
+    /* background-color: blueviolet; */
 }
-div#container > div.remaining_time > p.info {
+div#container > div.remaining_time > div.info_time > p.info {
     /* ALEX _____________  Ici tout est à changer jusqu'à la fin (à voir peut-être pas margin) */
     /*apparence*/
     border-bottom: 1px white solid;
+    width: fit-content;
+    margin-bottom: 2.5em;
     cursor: pointer;
     opacity: 1;
+    font-size: 1.5em;
 }
 /*Lancement de l'animation au clic */
-div#container > div.remaining_time > p.spoiler {
+div#container > div.remaining_time > div.info_time > p.spoiler {
     animation: spoiler 0.5s linear 0.3s ;
 }
 /*Clignotement du texte qui ouvre la data*/
@@ -298,7 +312,6 @@ div#container > div.remaining_time > p.spoiler {
     0% {opacity: 0;}
     50% {opacity: 1;}
     100% {opacity: 0;}
-    
 }
 
 a#Poweroff > img {
@@ -310,8 +323,51 @@ a#Poweroff > img {
     text-align: center;
 }
 
+
 @media screen and (max-width: 530px) {
     body > div#wrapper > img#gauche {
         display: none;
+    }
+
+    div#container > div.remaining_time img#hero {
+        height: 320px;
+        margin-top: 2.5em;
+    }
+
+    div#container > div.remaining_time {
+        flex-direction: row-reverse;
+        justify-content: space-between;
+    }
+
+    div#container > div.radar {
+        margin-top: 30vh;
+        margin-bottom: 2em;
+    }
+
+ 
+    div#container > div.remaining_time img#hero {
+        margin-right: 0;
+    }
+
+    div#container > div.remaining_time > div.info_time > p.dDay {
+        font-size: 2em;
+        margin-top: 2em;
+    }
+}
+
+/* Pour Mobile */
+@media screen and (max-width: 380px) {
+    div#container > div.remaining_time {
+        margin-right: 0;
+    }
+
+    div#container > div.remaining_time img#hero {
+        margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    div#container > div.remaining_time img#hero {
+        margin-right:  0;
     }
 }

@@ -1,7 +1,9 @@
 <?php
 // connexion à la bdd
 try{
-    $bdd = new PDO("mysql:host=localhost:3306;dbname=marvel", "root", "");
+
+    $bdd = new PDO("mysql:host=localhost:8889;dbname=marvel", "root", "root");
+
 }catch(Exception $e){
     die('Erreur : ' . $e->getMessage());
 }

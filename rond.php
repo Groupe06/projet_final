@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 
 <html lang="fr">
-
 <head>
     <!--META-->
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0 scalable=yes">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Liens des fonts-->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
@@ -13,7 +12,6 @@
     <!--Liens CSS-->
     <!-- CSS reset-->
     <link rel="stylesheet" href="https://meyerweb.com/eric/tools/css/reset/reset.css">
-
     <!--CSS gérnéral -->
     <link rel="stylesheet" href="CSS/rond.css">
     <!--CSS header -->
@@ -40,6 +38,22 @@
             }
         }
     </style>
+    <title>Radar</title>
+</head>
+<?php 
+        require_once("connexion_bdd.php");
+    
+        $date = date("Y");
+        
+		$tableau_svg = []; 
+?>
+<body>
+
+    <div id="wrapper">
+        <!-- Le header avec les images --> 
+        <header>
+            <div id="mainHeader">
+                <img src="assets/mainHeader.png" alt="background du header de la page">
 
 
     <title>Radar</title>
@@ -71,17 +85,21 @@
                         </div>
                     </div>
             </div>
-            <img id="midheader" src="assets/midheader1.png" alt=""> <!-- A REVOIR COULEUR -->
-            <img id="buttonheader" src="assets/buttonheader.png" alt="">
+
+            <img id="midheader" src="assets/midheader.png" alt=""> <!-- A REVOIR COULEUR -->
             <!-- img renvoyant à landing.html -->
-            <a href="landing.html">
+            <a href="index.html">
                 <img src="assets/PowerOff.svg" alt="bouton power off qui renvoie à l'accueil">
             </a>
         </header>
         
         <!-- élément de gauche (fond) -->
+
+        <!-- <img id="gauche" src="assets/barreGauche.png" alt=""> -->
+
         <img id="gauche" src="assets/barreGauche.png" alt="">
         
+
 
         
 
@@ -89,12 +107,15 @@
         <div id="container">
             <!-- _______________________ALEX_____________________
             Placement de l'image vide ici et du texte (avec le temps restant + V2)-->
-                <div class="remaining_time">
-                    <img src="" id="hero" alt="Avengers logo">
-                    <!-- NICO _____________ -->
-                    <p id="dDay"></p>
-                    <p class="info">Découvrir pourquoi ?
+
+            <div class="remaining_time">
+                <div class="info_time">
+                    <p id="dDay"><span>000</span>j <span>00</span>h <span>00</span>m <span>00</span>s</p>
+                    <p class="info">Découvrir pourquoi ?</p>
                 </div>
+                <img src="#" id="hero" alt="Avengers logo">
+            </div>
+
             <!--Cercle radar (fond)-->
             <div class="radar">
                 <svg width="550" height="623" viewBox="0 0 624 623" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -114,7 +135,6 @@
 
                   <!-- Barres sur lesquels sont positionnées les "heros" -->
                 <?php 
-                
                     require_once("requetes_points.php"); 
                     for($i=0; $i < count($tableau_svg); $i++){
                         echo $tableau_svg[$i];
@@ -134,16 +154,18 @@
 
                 <!-- Nom des héros -->
                 <div class="name">
-                    <p id="1">Hulk</p>   
-                    <p id="2" >Captain America</p>
-                    <p id="3">Black Widow</p>
+
+                    <p id="1">Hulk</p>
+                    <p id="2">Captain America</p>
+                    <p id="3">Black Widow</p>   
                     <p id="4">Doctor Strange</p>
-                    <p id="5">Spider Man</p>
-                    <p id="6">Black panthère</p>
+                    <p id="5">Spiderman</p>
+                    <p id="6">Black Panther</p>
                     <p id="7">Thor</p>
                     <p id="8">Captain Marvel</p>
                     <p id="9">Ant Man</p>
                     <p id="10">Iron Man</p>
+
                 </div>
 
             </div>
@@ -152,24 +174,29 @@
 
         <!--Affichage de la data par super-héro -->
         <div id="backgroundData">
-            
+
             <div id="data">
 
                 <header>
                     <div id="theHero">
                         <p></p>
+
                         <!-- NICO _____________ -->
+
                         <p>2008 - 2024</p>
                     </div>
                     <img src="assets/croix.svg" alt=" Croix pour fermer la page de data">
                 </header>
 
                 <div id="allTheData">
+
                     <!-- NICO _____________ -->
+
                 </div>
             </div>
 
         </div>
+
 
        
     </div> 
@@ -196,6 +223,7 @@
     </script>'; 
     require("fonction_affichage.php");
     affichage_personnage();?>
+
 
 </body>
 </html>

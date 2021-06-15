@@ -4,11 +4,12 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title></title>
-  
+
   <?php 
     //connexion à la bdd
     require_once("connexion_bdd.php"); 
   ?>
+
 </head>
 
 <style>
@@ -44,8 +45,9 @@
                     barPercentage: 1, // Réglage de la largeur des bars - En % - Basé sur la taille du canva
                     categoryPercentage: 0.6, // Réglage de l'espace entre les bars
                     label: "Salaire ",
-                    data: [<?php var_dump($data["salaire_dernier_film"]); echo $data["salaire_premier_film"],  $data["salaire_dernier_film"] ?>], // TODO PHP
-                    backgroundColor: ["#41BBC1", '#41BBC1'], //Couleur des barres
+
+                    data: [<?= $data["salaire_premier_film"],  $data["salaire_dernier_film"] ?>], // TODO PHP
+      backgroundColor: ["#41BBC1", '#41BBC1'], //Couleur des barres
                     borderColor: ["#41BBC1", "#41BBC1"], 
                     borderWidth: 1.2 // Epaisseur de la bordure 
                 }]

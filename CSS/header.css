@@ -66,14 +66,12 @@ body > div#wrapper > header > img {
 
 /* Placement de la barre horizontale*/
 body > div#wrapper > header > img#midheader {
-    /*placement*/
-    margin-left :50px;
-    /*apparence*/
-    width: 100vw;
+    width: 75vw;
     max-width: 100%;
-    left: 0;
-    height:max(3.1vw,27px);
+    right: 0;
+    height: max(3.95vw,27px);
 }
+
 body > div#wrapper > header > img#buttonheader {
     /*apparence*/
     width: max(4.3vw,37px);
