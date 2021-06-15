@@ -334,6 +334,7 @@ a#Poweroff > img {
     }
 }
 
+/* Pour Mobile */
 @media screen and (max-width: 380px) {
     div#container > div.remaining_time {
         margin-right: 0;
@@ -341,5 +342,11 @@ a#Poweroff > img {
 
     div#container > div.remaining_time img#hero {
         margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    div#container > div.remaining_time img#hero {
+        margin-right:  0;
     }
 }
