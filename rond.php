@@ -193,7 +193,24 @@
             tRebour = setTimeout ("Rebour();", 1000);
         }
         Rebour();
-    </script>'; 
+    </script>';?> 
+
+
+
+    // essai conversion
+    <script>
+    var maVariable = 'foo';
+ 
+    $.ajax({
+        url: 'fichier.php',
+        data: 'maVariable='+ maVariable,
+        success: function(reponse) {
+            alert(reponse); // reponse contient l'affichage du fichier PHP (soit echo)
+        }
+    });</script>
+    
+    
+     <?php
     require("fonction_affichage.php");
     affichage_personnage($bdd);
 
