@@ -89,7 +89,7 @@
                 <div class="remaining_time">
                     <img src="" id="hero" alt="Avengers logo">
                     <!-- NICO _____________ -->
-                    <p id="dDay"></p>
+                    <p id="dDay"><?= $date + ( $date - $data["annee_creation"] + $total_points) /2;  ?></p>
                     <p class="info">Découvrir pourquoi ?
                 </div>
             <!--Cercle radar (fond)-->
@@ -131,7 +131,24 @@
 
                 <!-- Nom des héros -->
                 <div class="name">
-                    <p id="1">Hulk</p>   
+
+                    <form method="post">
+                        <button id="1" class="nom" value="Hulk">Hulk</button>
+                        <button id="2" class="nom" value="Captain America">Captain America</button>
+                        <button id="3" class="nom" value="Black Widow">Black Widow</button>
+                        <button id="4" class="nom" value="Doctor Strange">Doctor Strange</button>
+                        <button id="5" class="nom" value="Spider Man">Spider Man</button>
+                        <button id="6" class="nom" value="Black Panthere">Black Panthère</button>
+                        <button id="7" class="nom" value="Thor">Thor</button>
+                        <button id="8" class="nom" value="Captain Marvel">Captain Marvel</button>
+                        <button id="9" class="nom" value="Ant Man">Ant Man</button>
+                        <button id="10" class="nom" value="Iron Man">Iron Man</button>
+                    </form>
+
+
+
+
+                    <!-- <p id="1">Hulk</p>   
                     <p id="2" >Captain America</p>
                     <p id="3">Black Widow</p>
                     <p id="4">Doctor Strange</p>
@@ -140,7 +157,7 @@
                     <p id="7">Thor</p>
                     <p id="8">Captain Marvel</p>
                     <p id="9">Ant Man</p>
-                    <p id="10">Iron Man</p>
+                    <p id="10">Iron Man</p> -->
                 </div>
 
             </div>
@@ -174,6 +191,13 @@
     <script type="text/javascript">
         var Affiche=document.getElementById("dDay");
         function Rebour() {
+            <?php 
+
+                $requete_mort = ("SELECT * FROM super_heros WHERE nom = :nom");
+                $reponse_mort = $requete_mort->query(
+                    ":nom" = 
+            );
+            ?>
             var date1 = new Date();
             var date2 = new Date ("Jan 1, 2031 00:00:00");
             var sec = (date2 - date1) / 1000;
