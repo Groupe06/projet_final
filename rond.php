@@ -89,7 +89,7 @@
                 <div class="remaining_time">
                     <img src="" id="hero" alt="Avengers logo">
                     <!-- NICO _____________ -->
-                    <p id="dDay"><?= $date + ( $date - $data["annee_creation"] + $total_points) /2;  ?></p>
+                    <p id="dDay"></p>
                     <p class="info">Découvrir pourquoi ?
                 </div>
             <!--Cercle radar (fond)-->
@@ -193,10 +193,10 @@
         function Rebour() {
             <?php 
 
-                $requete_mort = ("SELECT * FROM super_heros WHERE nom = :nom");
-                $reponse_mort = $requete_mort->query(
-                    ":nom" = 
-            );
+            //     $requete_mort = ("SELECT * FROM super_heros WHERE nom = :nom");
+            //     $reponse_mort = $requete_mort->query(
+            //         ":nom" = 
+            // );
             ?>
             var date1 = new Date();
             var date2 = new Date ("Jan 1, 2031 00:00:00");
