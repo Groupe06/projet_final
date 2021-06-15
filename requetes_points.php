@@ -50,7 +50,9 @@ if($reponse):
         //     $points_totaux_films = 0;
         // endif;
 
-
+        
+        // section films totaux
+        $points_totaux_films =12.5 - $data["nombre_films_totaux"] * 1.25;
 
         $points_totaux_films =12.5 - $data["nombre_films_totaux"] * 1.25;
 
