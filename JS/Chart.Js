@@ -9,6 +9,12 @@
 
     ///Graphique en doughnut - Nb film solo/ film en groupe
     // Récupération du canvas 
+    const doughnutDiv = document.getElementById("doughnutContainer")
+    doughnutDiv.innerHTML = '';
+    var z = document.createElement('canvas'); // is a node
+    z.id = 'doughnut';
+    doughnutDiv.appendChild(z);
+
     var ctx = document.getElementById("doughnut").getContext("2d");
     
     // Valeur des labels 
@@ -81,6 +87,11 @@
            
            // Option du graphique
            options: { 
+            // tooltips: {
+            // callbacks: {
+            //         label: function(tooltipItems, data) {
+            //             return "$" + tooltipItems.yLabel.toString();
+            //         }}},
             ticks: {
                 padding: 20
             },

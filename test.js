@@ -33,6 +33,10 @@
                 return 0;
     }
 }
+
+function numberWithSpaces(x) {
+    return x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
+}
     
     
     function prepareDataviz(ID, hero) {
@@ -58,8 +62,8 @@
         //alert(value.comments[0].message);
 
         //Déclaration des variables nécessaires
-        const augmentation = value[id][nom].augmentation_salaire_film;
-        const  debutMcu = value[id][nom].annee_creation;
+        const augmentation = numberWithSpaces(value[id][nom].augmentation_salaire_film);
+        const debutMcu = value[id][nom].annee_creation;
         const mort = value[id][nom].mort;
         const premierSalaire = value[id][nom].salaire_premier_film;
         const dernierSalaire = value[id][nom].salaire_dernier_film;
@@ -77,6 +81,7 @@
             var Nb_annee = currentYear - debutMcu
             document.getElementById("Nb_annee").textContent = Nb_annee
         }
+
         else {
             var Nb_annee =  mort - debutMcu
             document.getElementById("Nb_annee").textContent = Nb_annee
@@ -99,7 +104,7 @@
         let dataBar = [premierSalaire, dernierSalaire];
         Graphique_Bar(dataBar);
 
-
+        alert('again')
         //Création du graphique 
         let dataDoughnut = [filmMcu, filmSolo];
         Graphique_Doughnut(dataDoughnut);
