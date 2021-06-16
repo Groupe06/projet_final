@@ -4,8 +4,10 @@
     Chart.defaults.scale.gridLines.drawOnChartArea = false;
     Chart.defaults.global.defaultFontColor = 'white';
     Chart.defaults.global.defaultFontFamily = 'zekton';
-    Chart.defaults.global.defaultFontSize = 16;
+    Chart.defaults.global.defaultFontSize = 14;
     
+
+    ///Graphique en doughnut - Nb film solo/ film en groupe
     // Récupération du canvas 
     var ctx = document.getElementById("doughnut").getContext("2d");
     
@@ -18,7 +20,7 @@
         data: {
             labels: ["Autre films", "Films solo"],
             datasets: [{
-                barPercentage: 1, // Réglage de la largeur des bars - En % - Basé sur la taille du canva
+                barPercentage: 0.5, // Réglage de la largeur des bars - En % - Basé sur la taille du canva
                 categoryPercentage: 0.6, // Réglage de l'espace entre les bars
                 label: "Salaire ",
                 data: [6, 2], // TODO PHP
@@ -51,7 +53,7 @@
     });
 
 
-    /// Bar 
+    ///Graphique en bar - Evol. salaire premier/dernier film
 
        // Récupération du canvas 
        var ctx = document.getElementById("barChart").getContext("2d");
@@ -65,7 +67,7 @@
            data: {
                labels: ["Premier salaire", "Dernier salaire"],
                datasets: [{
-                   barPercentage: 1, // Réglage de la largeur des bars - En % - Basé sur la taille du canva
+                   barPercentage: 0.5, // Réglage de la largeur des bars - En % - Basé sur la taille du canva
                    categoryPercentage: 0.6, // Réglage de l'espace entre les bars
                    label: "Salaire ",
                    data: [500000, 1000000], // TODO PHP
@@ -77,9 +79,13 @@
            
            // Option du graphique
            options: { 
+            ticks: {
+                padding: 20
+            },
             legend: {
                 display: false,
             },
+        
             scales: { // Echelle           
                 yAxes: [{
                     type: 'logarithmic', // Echelle logarithmic - TODO checker pour tous les persos
