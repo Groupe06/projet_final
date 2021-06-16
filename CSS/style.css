@@ -334,3 +334,16 @@ marquee {
     bottom: 0;
     padding: 1vh 0;
 }
+
+
+marquee {
+    background-color: var(--white);
+    opacity: 0.5;
+    color: black;
+    font-family: "zekton";
+    font-size: 2vw;
+    margin-bottom: 0.5em;
+    position: absolute;
+    bottom: 0;
+    padding: 1vh 0;
+}
