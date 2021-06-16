@@ -168,7 +168,7 @@ a {
     text-decoration: none;
     color: var(--white);
 }
-p {
+p{
     font-family: 'zekton';
     font-size: max(1.5vw, 0.8em);
     text-align: center;
@@ -195,7 +195,7 @@ p {
 }
 
 .warning {
-    animation: blinker 5s ease-in-out;
+    animation: blinker 3s ease-in-out;
 }
 
 /* Effet de clignotement de texte */
@@ -258,15 +258,17 @@ body > div#wrapper > div#message {
          width: 0;
      }
      100% {
-        width: max(60vw,300px);
+        width: max(60vw,295px);
      }
  }
 
  /* premier p (ATTENTION) */
- body > div#wrapper > div#message > p:nth-child(1) {
+ body > div#wrapper > div#message > h1:nth-child(1) {
     font-family: 'alexana';
     font-size: max(2.5vw, 20px);;
     text-transform: uppercase;
+    padding: 1em;
+    color: var(--white);
  }
  /* second p (paragraphe) */
  body > div#wrapper > div#message > p:nth-child(2) {
@@ -277,6 +279,22 @@ body > div#wrapper > div#message {
  body > div#wrapper > div#message > p:nth-child(3) {
     padding-bottom:0;
  }
+
+ body > div#wrapper > div#message > p, #choice {
+     animation: delai 2s ease-in-out;
+ }
+
+@keyframes delai {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+         opacity: 0;
+    }
+}
+
+
  /* placement + apparence de la réponse (oui / non) */
  body > div#wrapper > div#message > div#choice {
     /* Placement */
@@ -303,4 +321,16 @@ body > div#wrapper > div#message {
 }
 body > div#wrapper > div#message > div#choice > a:hover::after {
     transform: scaleX(1);
+}
+
+marquee {
+    background-color: var(--white);
+    opacity: 0.5;
+    color: black;
+    font-family: "zekton";
+    font-size: 2vw;
+    margin-bottom: 0.5em;
+    position: absolute;
+    bottom: 0;
+    padding: 1vh 0;
 }

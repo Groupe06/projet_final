@@ -163,14 +163,63 @@
             <div id="data">
 
                 <header>
+                    <!-- Titre + années -->
                     <div id="theHero">
                         <!-- Nom du héro cliqué -->
                         <p></p>
                         <!-- date de naissance et de mort du héro -->
                         <p></p>
+                        <p>2008 - 2024</p> <!-- Todo PHP !-->
                     </div>
                     <img src="assets/croix.svg" alt=" Croix pour fermer la page de data">
                 </header>
+
+                <main>
+                    <div id="augmentation">
+                    <svg width="171" height="32" viewBox="0 0 171 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 31C31.3859 8.36129 107.726 -23.3329 170 31" stroke="#00EBEC"/>
+                        <path d="M1 31C31.3859 8.36129 107.726 -23.3329 170 31" stroke="#00EBEC"/>
+                        <path d="M1 31C31.3859 8.36129 107.726 -23.3329 170 31" stroke="#00EBEC"/>
+                        <path d="M1 31C31.3859 8.36129 107.726 -23.3329 170 31" stroke="#00EBEC"/>
+                        <path d="M1 31C31.3859 8.36129 107.726 -23.3329 170 31" stroke="#00EBEC"/>
+                    </svg>
+                   
+                    
+                        <span>Augmentation moyenne <br> de salaire</span>
+                        <h2>1000000$</h2> <!-- TODO PHP !-->
+                        <span>entre les films</span>
+                        
+                        <svg width="171" height="37" viewBox="0 0 171 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M170 1.00001C139.614 27.3333 63.2739 64.2 1 1.00001" stroke="#00EBEC"/>
+                            <path d="M170 1.00001C139.614 27.3333 63.2739 64.2 1 1.00001" stroke="#00EBEC"/>
+                            <path d="M170 1.00001C139.614 27.3333 63.2739 64.2 1 1.00001" stroke="#00EBEC"/>
+                            <path d="M170 1.00001C139.614 27.3333 63.2739 64.2 1 1.00001" stroke="#00EBEC"/>
+                            <path d="M170 1.00001C139.614 27.3333 63.2739 64.2 1 1.00001" stroke="#00EBEC"/>
+                        </svg>
+
+                </div>
+                       
+                  
+                    <div id="barContainer">
+                    <canvas id="barChart"></canvas>
+                    </div>
+
+                    <div id="envieContinuer">
+                        <span>L'acteur a t'il envie <br>de continuer</span>
+                        <h2>Oui</h2> <!-- TODO PHP !-->
+                    </div>
+
+                    <div id="apparition">
+                        <h2><span>12</span> années passées depuis sa première apparition</h2>
+                    </div>
+
+                    <div id="doughnutContainer">
+                        <canvas id="doughnut"></canvas>
+                    </div>
+                </main>
+
+                    
+                
 
                 <div id="allTheData">
 
@@ -187,5 +236,11 @@
     <script src="JS/rond.js"></script>
 
 
+
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.0/Chart.bundle.js"></script>
+<script src="JS/Chart.Js"></script>
+<script src="test.js"></script>
+
+
 </html>
