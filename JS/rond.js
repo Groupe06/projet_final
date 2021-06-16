@@ -65,7 +65,7 @@ for (var i = 0; i < herosName.length ; i ++){
             var id_rect = "rect" + this.id
             // Coloration du néon en rouge - Différenciation 
             document.getElementById(id_rect).style.fill = '#FF0000';
-            document.querySelector("div#onboarding").classList.toggle("end")
+            document.querySelector("div#onboarding").classList.add("end")
     }
 
     return HerofullName
