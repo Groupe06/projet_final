@@ -85,6 +85,7 @@
             legend: {
                 display: false,
             },
+        
             scales: { // Echelle           
                 yAxes: [{
                     type: 'logarithmic', // Echelle logarithmic - TODO checker pour tous les persos

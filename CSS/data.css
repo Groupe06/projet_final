@@ -17,11 +17,12 @@ h2 {
 main {
     /* Paramètres du container */
     margin: 4vh 5vw;
-    height: 70%;
+    height: 60%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+    gap: 4vw;
 }
 
 #doughnutContainer{
