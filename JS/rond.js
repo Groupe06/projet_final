@@ -21,7 +21,11 @@ for (var i = 0; i < herosName.length ; i ++){
 
         // Pour seul but de récupérer le nom du héro sur lequel l'utilisateur à cliqué
         HerofullName =  this.textContent
-        recuperation_nom(HerofullName)
+        console.log(HerofullName)
+        lolo(HerofullName)
+
+        // Fonction compteur
+        Rebour()
 
         // Sélection de la div qui contiendra l'image
 
@@ -72,7 +76,7 @@ for (var i = 0; i < herosName.length ; i ++){
 }
 
 // Pour seul but de récupérer le nom du héro sur lequel l'utilisateur à cliqué
-function recuperation_nom(HerofullName) {
+function lolo(HerofullName) {
     return HerofullName
 }
 
@@ -94,7 +98,7 @@ function blink() {
     document.querySelector("div#container > div.remaining_time").classList.remove("visible")
     document.querySelector("body > div#wrapper > div#backgroundData").classList.toggle("visible")
     // 2crit dans la fenêtre le nom du héro sur lequel l'utilisateur à cliqué
-    document.querySelector("body > div#wrapper > div#backgroundData > div#data > header > div > p:nth-child(1)").innerHTML = recuperation_nom(HerofullName)
+    document.querySelector("body > div#wrapper > div#backgroundData > div#data > header > div > p:nth-child(1)").innerHTML = lolo(HerofullName)
     closeData()
 
 }
