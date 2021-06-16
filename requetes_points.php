@@ -10,7 +10,7 @@ if($reponse):
     $i = 1 ;
 
 
-    // tant que tous les personnages ne sont pas passés 
+// WHILE -> tant que tous les personnages ne sont pas passés 
     while ($data = $reponse->fetch()):
 
         // Récupération données pour remplissage "$donnes_json" puis mise envoi dans fichier json 
@@ -116,7 +116,9 @@ if($reponse):
         
 
 
-    endwhile; //fin while 
+    endwhile; 
+//FIN while 
+
 
     //encodage php en json
     $donnees_json = json_encode($donnees_json);
