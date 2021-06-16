@@ -106,3 +106,71 @@ document.querySelector("body > div#wrapper > div#backgroundData > div#data > hea
     
 }
 }
+
+// Fonctions du compté à rebours
+var Affiche = document.getElementById("dDay");
+
+// Fonction principale du compte à rebours
+function Rebour() {
+switch (HerofullName) {
+    case 'Hulk':
+        var date2 = new Date ("Jan 1, 2030 00:00:00");
+        Calcul_compteur(date2);
+        break;
+    
+    case 'Doctor Strange':
+        var date2 = new Date ("Feb 1, 2037 00:00:00");
+        Calcul_compteur(date2);
+        break;
+
+    case 'Spiderman':
+        var date2 = new Date ("Aug 1, 2034 00:00:00");
+        Calcul_compteur(date2);
+        break;
+
+    case 'Black Panther':
+        var date2 = new Date ("Jul 1, 2033 00:00:00");
+        Calcul_compteur(date2);
+        break;
+
+    case 'Thor':
+        var date2 = new Date ("Mar 1, 2030 00:00:00");
+        Calcul_compteur(date2);
+        break;
+
+    case 'Captain Marvel':
+        var date2 = new Date ("Oct 1, 2036 00:00:00");
+        Calcul_compteur(date2);
+        break;
+
+    case 'Ant Man':
+        var date2 = new Date ("Aug 1, 2034 00:00:00");
+        Calcul_compteur(date2);
+        break;
+    
+    case 'Black Widow':
+        var date2 = new Date ("Sep 1, 2021 00:00:00");
+        Calcul_compteur(date2);
+        break;
+
+    default: Affiche.innerHTML = "Disparu du MCU";
+
+}
+}
+
+// Fonction de calcul j : min : s
+function Calcul_compteur(date2) {
+var date1 = new Date();
+var sec = (date2 - date1) / 1000;
+var n = 24 * 3600;
+if (sec > 0) {
+    j = Math.floor (sec / n);
+    h = Math.floor ((sec - (j * n)) / 3600);
+    mn = Math.floor ((sec - ((j * n + h * 3600))) / 60);
+    sec = Math.floor (sec - ((j * n + h * 3600 + mn * 60)));
+    Affiche.innerHTML = j + " j "+ h +" h "+ mn +" min "+ sec + " s";
+    window.status = "Temps restant : " + j +" j "+ h +" h "+ mn + " min " + sec + " s ";
+}
+tRebour = setTimeout ("Rebour();", 1000);
+}
+Rebour();
