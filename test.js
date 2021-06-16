@@ -104,7 +104,7 @@ function numberWithSpaces(x) {
         let dataBar = [premierSalaire, dernierSalaire];
         Graphique_Bar(dataBar);
 
-        alert('again')
+        
         //Création du graphique 
         let dataDoughnut = [filmMcu, filmSolo];
         Graphique_Doughnut(dataDoughnut);
