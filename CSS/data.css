@@ -10,16 +10,13 @@ span {
     color: white;
 }
 
-
 #doughnutContainer{
-    width: 500px;
+    width: 300px;
 }
 
 #barChart {
-    width: 500px;
+    width: 300px;
 }
-
-
 
 body > div#wrapper > div#backgroundData:not(.visible) {
     display: none;

@@ -6,6 +6,8 @@
     Chart.defaults.global.defaultFontFamily = 'zekton';
     Chart.defaults.global.defaultFontSize = 16;
     
+
+    ///Graphique en doughnut - Nb film solo/ film en groupe
     // Récupération du canvas 
     var ctx = document.getElementById("doughnut").getContext("2d");
     
@@ -51,7 +53,7 @@
     });
 
 
-    /// Bar 
+    ///Graphique en bar - Evol. salaire premier/dernier film
 
        // Récupération du canvas 
        var ctx = document.getElementById("barChart").getContext("2d");
