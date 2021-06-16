@@ -152,6 +152,8 @@ rect {
 
     /*A voir*/
     border-radius: 100%;
+    height:70px;
+    width: 70px;
     background: radial-gradient(circle, rgba(0,254,255,0.6) 0%, rgba(106, 128, 128, 0.3) 41%,rgba(106, 128, 128, 0)60%);
 }
 
@@ -309,11 +311,11 @@ div#container > div.remaining_time > div#all_infos > div.info_time > p.info {
     font-size: 1.5em;
 }
 
-div.end {
-    display:none
+.end {
+    display:none;
 }
 
-#onboarding {
+#onboarding:not(.end) {
     margin-right:10%;
     margin-top: 30%;
     display: flex;

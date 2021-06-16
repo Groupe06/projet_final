@@ -16,7 +16,7 @@ for (var i = 0; i < herosName.length ; i ++){
         herosClicked.push(this.id)
         console.log(herosClicked)
 
-        document.getElementById("#onboarding").classList.toggle("end")
+        
 
         // Pour seul but de récupérer le nom du héro sur lequel l'utilisateur à cliqué
         HerofullName =  this.textContent
@@ -58,6 +58,7 @@ for (var i = 0; i < herosName.length ; i ++){
             var id_rect = "rect" + this.id
             // Coloration du néon en rouge - Différenciation 
             document.getElementById(id_rect).style.fill = '#FF0000';
+            document.querySelector("div#onboarding").classList.toggle("end")
             
 
     }
