@@ -9,12 +9,19 @@
 
     ///Graphique en doughnut - Nb film solo/ film en groupe
     // Récupération du canvas 
+    const doughnutDiv = document.getElementById("doughnutContainer")
+    doughnutDiv.innerHTML = '';
+    var z = document.createElement('canvas'); // is a node
+    z.id = 'doughnut';
+    doughnutDiv.appendChild(z);
+
     var ctx = document.getElementById("doughnut").getContext("2d");
     
     // Valeur des labels 
     var labelValues = ["Iron Man", "Spider-Man : Far From home"]
 
     // Création du graphique 
+    function Graphique_Doughnut(dataDoughnut) {
     var myChart = new Chart(ctx, {
         type: 'doughnut',
         data: {
@@ -23,7 +30,7 @@
                 barPercentage: 0.5, // Réglage de la largeur des bars - En % - Basé sur la taille du canva
                 categoryPercentage: 0.6, // Réglage de l'espace entre les bars
                 label: "Salaire ",
-                data: [6, 2], // TODO PHP
+                data: dataDoughnut,// TODO PHP
                 backgroundColor: ["#41BBC1", '#0C585B'], //Couleur des barres
                 borderColor: ["#FFFFFF", "#FFFFFF"], 
                 borderWidth: 2 // Epaisseur de la bordure 
@@ -51,11 +58,12 @@
             }
         },
     });
+}
 
 
-    ///Graphique en bar - Evol. salaire premier/dernier film
-
-       // Récupération du canvas 
+        function Graphique_Bar(dataBar) {
+        ///Graphique en bar - Evol. salaire premier/dernier film
+        // Récupération du canvas 
        var ctx = document.getElementById("barChart").getContext("2d");
     
        // Valeur des labels 
@@ -70,7 +78,7 @@
                    barPercentage: 0.5, // Réglage de la largeur des bars - En % - Basé sur la taille du canva
                    categoryPercentage: 0.6, // Réglage de l'espace entre les bars
                    label: "Salaire ",
-                   data: [500000, 1000000], // TODO PHP
+                   data: dataBar, // TODO PHP
                    backgroundColor: ["#41BBC1", '#0C585B'], //Couleur des barres
                    borderColor: ["", ""], 
                    borderWidth: 2 // Epaisseur de la bordure 
@@ -79,6 +87,11 @@
            
            // Option du graphique
            options: { 
+            // tooltips: {
+            // callbacks: {
+            //         label: function(tooltipItems, data) {
+            //             return "$" + tooltipItems.yLabel.toString();
+            //         }}},
             ticks: {
                 padding: 20
             },
@@ -101,4 +114,5 @@
                }
            },
        });
+    }
     
