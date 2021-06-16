@@ -21,12 +21,8 @@ for (var i = 0; i < herosName.length ; i ++){
 
         // Pour seul but de récupérer le nom du héro sur lequel l'utilisateur à cliqué
         HerofullName =  this.textContent
-<<<<<<< Updated upstream
-        lolo(HerofullName)
-=======
         console.log(HerofullName)
         recuperation_nom(HerofullName)
->>>>>>> Stashed changes
 
         // Sélection de la div qui contiendra l'image
 
@@ -65,16 +61,7 @@ for (var i = 0; i < herosName.length ; i ++){
             var id_rect = "rect" + this.id
             // Coloration du néon en rouge - Différenciation 
             document.getElementById(id_rect).style.fill = '#FF0000';
-<<<<<<< Updated upstream
-            blink()
-
-            
-=======
             document.querySelector("div#onboarding").classList.toggle("end")
-            blink()
->>>>>>> Stashed changes
-
-        // ALEX ____________________ Je pense que c'est ici que tu dois enelever la barre de gauche
     }
 
     return HerofullName
