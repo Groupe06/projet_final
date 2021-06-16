@@ -22,7 +22,7 @@ function placement_height($i, $data, $date, $total_points){
         $emplacement_height = ($data["mort"] - $data["annee_creation"]) * 7.875;// 7.8 px par annee 
         
     }else{
-        $emplacement_height = (($date - $data["annee_creation"] + $total_points) /2 * 7.875) ;
+        $emplacement_height = ((($date - $data["annee_creation"]) + ($total_points /2)) * 7.875);
     }
     return $emplacement_height;
 }

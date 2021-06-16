@@ -76,22 +76,36 @@
             </a>
         </header>    
 
-        <!-- Créàation du responsive avec l'affichage des images des superheroes-->
+        <!-- Création du responsive avec l'affichage des images des superheroes-->
         <div id="container">
-            <!-- _______________________ALEX_____________________
-            Placement de l'image vide ici et du texte (avec le temps restant + V2)-->
 
+            <!-- Texte onboarding qui disparait au clic -->
+            <div id="onboarding">
+                <div class="texte_onboarding">
+                    <img src="assets/icon_click.svg" alt="" >
+                    <p>Cliquez-sur un super hero pour découvrir les prédictions sur son espérance de vie</p>
+                </div>
+            </div>
+
+            <!-- Apparition au au clic du héro et du temps qu'il lui reste -->
             <div class="remaining_time">
-                <div class="info_time">
-                    <p id="dDay"><span>000</span>j <span>00</span>h <span>00</span>m <span>00</span>s</p>
-                    <p class="info">Découvrir pourquoi ?</p>
+
+                <div id="all_infos">
+                    <div class="info_time">
+                        <p id="dDay"><span>000</span>j <span>00</span>h <span>00</span>m <span>00</span>s</p>
+                    </div>
+                    <div class="info_data">
+                        <p class="info">Découvrir pourquoi ?</p>
+                    </div>
                 </div>
                 <img src="#" id="hero" alt="Avengers logo">
             </div>
 
+
+            
             <!--Cercle radar (fond)-->
             <div class="radar">
-                <svg width="550" height="623" viewBox="0 0 624 623" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg viewBox="0 0 624 623" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <!-- Cercle représentant les années -->
                     <circle cx="310" cy="315" r="5" fill="white" fill-opacity="0.3"/>
                     <circle cx="310" cy="314" r="76.5" stroke="white" stroke-opacity="0.3" stroke-width="3"/>
@@ -127,7 +141,6 @@
 
                 <!-- Nom des héros -->
                 <div class="name">
-
                     <p id="1">Hulk</p>
                     <p id="2">Captain America</p>
                     <p id="3">Black Widow</p>   
@@ -138,7 +151,6 @@
                     <p id="8">Captain Marvel</p>
                     <p id="9">Ant Man</p>
                     <p id="10">Iron Man</p>
-
                 </div>
 
             </div>
@@ -151,15 +163,63 @@
             <div id="data">
 
                 <header>
+                    <!-- Titre + années -->
                     <div id="theHero">
+                        <!-- Nom du héro cliqué -->
                         <p></p>
-
-                        <!-- NICO _____________ -->
-
-                        <p>2008 - 2024</p>
+                        <!-- date de naissance et de mort du héro -->
+                        <p></p>
+                        <p>2008 - 2024</p> <!-- Todo PHP !-->
                     </div>
                     <img src="assets/croix.svg" alt=" Croix pour fermer la page de data">
                 </header>
+
+                <main>
+                    <div id="augmentation">
+                    <svg width="171" height="32" viewBox="0 0 171 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M1 31C31.3859 8.36129 107.726 -23.3329 170 31" stroke="#00EBEC"/>
+                        <path d="M1 31C31.3859 8.36129 107.726 -23.3329 170 31" stroke="#00EBEC"/>
+                        <path d="M1 31C31.3859 8.36129 107.726 -23.3329 170 31" stroke="#00EBEC"/>
+                        <path d="M1 31C31.3859 8.36129 107.726 -23.3329 170 31" stroke="#00EBEC"/>
+                        <path d="M1 31C31.3859 8.36129 107.726 -23.3329 170 31" stroke="#00EBEC"/>
+                    </svg>
+                   
+                    
+                        <span>Augmentation moyenne <br> de salaire</span>
+                        <h2>1000000$</h2> <!-- TODO PHP !-->
+                        <span>entre les films</span>
+                        
+                        <svg width="171" height="37" viewBox="0 0 171 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M170 1.00001C139.614 27.3333 63.2739 64.2 1 1.00001" stroke="#00EBEC"/>
+                            <path d="M170 1.00001C139.614 27.3333 63.2739 64.2 1 1.00001" stroke="#00EBEC"/>
+                            <path d="M170 1.00001C139.614 27.3333 63.2739 64.2 1 1.00001" stroke="#00EBEC"/>
+                            <path d="M170 1.00001C139.614 27.3333 63.2739 64.2 1 1.00001" stroke="#00EBEC"/>
+                            <path d="M170 1.00001C139.614 27.3333 63.2739 64.2 1 1.00001" stroke="#00EBEC"/>
+                        </svg>
+
+                </div>
+                       
+                  
+                    <div id="barContainer">
+                    <canvas id="barChart"></canvas>
+                    </div>
+
+                    <div id="envieContinuer">
+                        <span>L'acteur a t'il envie <br>de continuer</span>
+                        <h2>Oui</h2> <!-- TODO PHP !-->
+                    </div>
+
+                    <div id="apparition">
+                        <h2><span>12</span> années passées depuis sa première apparition</h2>
+                    </div>
+
+                    <div id="doughnutContainer">
+                        <canvas id="doughnut"></canvas>
+                    </div>
+                </main>
+
+                    
+                
 
                 <div id="allTheData">
 
@@ -174,29 +234,13 @@
        
     </div> 
     <script src="JS/rond.js"></script>
-    <?=
-    '<script type="text/javascript">
-        var Affiche=document.getElementById("dDay");
-        function Rebour() {
-            var date1 = new Date();
-            var date2 = ' . ($date + ( $date - $data["annee_creation"] + $total_points)) / 2 . ';
-            var sec = (date2 - date1) / 1000;
-            var n = 24 * 3600;
-            if (sec > 0) {
-                j = Math.floor (sec / n);
-                h = Math.floor ((sec - (j * n)) / 3600);
-                mn = Math.floor ((sec - ((j * n + h * 3600))) / 60);
-                sec = Math.floor (sec - ((j * n + h * 3600 + mn * 60)));
-                Affiche.innerHTML = j + " j "+ h +" h "+ mn +" min "+ sec + " s";
-                window.status = "Temps restant : " + j +" j "+ h +" h "+ mn + " min " + sec + " s ";
-            }
-            tRebour = setTimeout ("Rebour();", 1000);
-        }
-        Rebour();
-    </script>'; 
-    require("fonction_affichage.php");
-    affichage_personnage();?>
+
 
 
 </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.0/Chart.bundle.js"></script>
+<script src="JS/Chart.Js"></script>
+<script src="test.js"></script>
+
+
 </html>
