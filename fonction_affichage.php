@@ -17,8 +17,7 @@ function affichage_personnage($bdd){?>
     ]);
 
     $reponse_affichage = $requete_affichage->fetch(PDO::FETCH_ASSOC);
-    var_dump($reponse_affichage);
-    var_dump($nom);
+
 
     
 }
