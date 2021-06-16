@@ -73,6 +73,7 @@ if($reponse):
 
         $points_totaux_films =12.5 - $data["nombre_films_totaux"] * 1.25;
 
+
         //si point < 0 
         if( $points_totaux_films < 0 ):
             $points_totaux_films = 0;
@@ -82,6 +83,7 @@ if($reponse):
 
 
 // SECTION dernier film     
+
 
         $points_dernier_salaire = $data["salaire_dernier_film"] / 4375000;
 
