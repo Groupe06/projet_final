@@ -186,7 +186,7 @@
                    
                     
                         <span>Augmentation moyenne <br> de salaire</span>
-                        <h2>1000000$</h2> <!-- TODO PHP !-->
+                        <h2 id="augmentationSalaire"></h2> <!-- TODO PHP !-->
                         <span>entre les films</span>
                         
                         <svg width="171" height="37" viewBox="0 0 171 37" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -206,11 +206,11 @@
 
                     <div id="envieContinuer">
                         <span>L'acteur a t'il envie <br>de continuer</span>
-                        <h2>Oui</h2> <!-- TODO PHP !-->
+                        <h2 id="envieActeur"></h2> <!-- TODO PHP !-->
                     </div>
 
                     <div id="apparition">
-                        <h2><span>12</span> années passées depuis sa première apparition</h2>
+                        <h2><span id="Nb_annee"></span> années passées depuis sa première apparition</h2>
                     </div>
 
                     <div id="doughnutContainer">

@@ -16,12 +16,15 @@ for (var i = 0; i < herosName.length ; i ++){
         herosClicked.push(this.id)
         console.log(herosClicked)
 
-        
 
         // Pour seul but de récupérer le nom du héro sur lequel l'utilisateur à cliqué
         HerofullName =  this.textContent
         console.log(HerofullName)
         recuperation_nom(HerofullName)
+
+        // Lancement de la page chart 
+        var ID = this.id;
+        prepareDataviz(ID, HerofullName)
 
         // Fonction compteur
         Rebour()
