@@ -253,12 +253,14 @@ body > div#wrapper > div#message {
  @keyframes open {
      0% {
          width : 0;
+         height: 0;
      }
      40% {
          width: 0;
      }
      100% {
         width: max(60vw,300px);
+        height: 100%;
      }
  }
 
@@ -303,4 +305,16 @@ body > div#wrapper > div#message {
 }
 body > div#wrapper > div#message > div#choice > a:hover::after {
     transform: scaleX(1);
+}
+
+marquee {
+    background-color: var(--white);
+    opacity: 0.5;
+    color: black;
+    font-family: "zekton";
+    font-size: 2vw;
+    margin-bottom: 0.5em;
+    position: absolute;
+    bottom: 0;
+    padding: 1vh 0;
 }
