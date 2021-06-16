@@ -35,7 +35,7 @@ body > div#wrapper{
     box-sizing: content-box;
     overflow:hidden;
     /* background */
-    background: url("/assets/fondNoirCarreaux.png") center;
+    background: url("/HETIC wamp/projet_final/assets/fondNoirCarreaux.png") center;
     
 }
 
@@ -152,7 +152,7 @@ rect {
 
     /*A voir*/
     border-radius: 100%;
-    background: radial-gradient(circle, rgba(0,254,255,0.6) 0%, rgba(106, 128, 128, 0.3) 41%,rgba(106, 128, 128, 0)60%);
+    background: radial-gradient(circle, rgba(0,254,255,0.6) 0%, rgba(0, 255, 255, 0.137) 40%,rgba(106, 128, 128, 0)170%);
 }
 
 /* Hulk*/
