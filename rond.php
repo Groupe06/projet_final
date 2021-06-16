@@ -249,6 +249,7 @@
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.0/Chart.bundle.js"></script>
 <script src="JS/Chart.Js"></script>
+<script src="test.js"></script>
 
 
 </html>
