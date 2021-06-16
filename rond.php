@@ -195,8 +195,7 @@
                     </div>
 
                     <div id="apparition">
-                        <h2>12<h2> <!-- Todo PHP !-->
-                        <span>Années passées depuis sa première apparition</span>
+                        <h2><span>12</span> années passées depuis sa première apparition</h2>
                     </div>
 
                     <div id="doughnutContainer">

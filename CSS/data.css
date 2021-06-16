@@ -74,6 +74,16 @@ body > div#wrapper > div#backgroundData:not(.visible) {
     display: block;
 }
 
+#apparition span {
+    color: var(--border_neon);
+    font-size: 120px;
+}
+#apparition h2 {
+    font-size: 20px;
+    color: var(--white);
+}
+
+
 body > div#wrapper > div#backgroundData {
     position: relative;
     display: flex;
@@ -117,6 +127,7 @@ body > div#wrapper > div#backgroundData > div#data > header > div {
 }
 body > div#wrapper > div#backgroundData > div#data > header > div > p:nth-child(1) {
     font-size : max(2.5vw,20px);
+    margin-bottom: 10px;
 }
 body > div#wrapper > div#backgroundData > div#data > header > div > p:nth-child(2) {
     font-size : max(1.5vw,10px);
