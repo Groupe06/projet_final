@@ -10,16 +10,68 @@ span {
     color: white;
 }
 
+h2 {
+    font-family: 'zekton'
+}
+
+main {
+    /* Paramètres du container */
+    margin: 4vh 5vw;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 2vw;
+    align-items: center;
+}
+
 #doughnutContainer{
     width: 300px;
 }
 
-#barChart {
-    width: 300px;
+#barContainer {
+    width: 250px;
 }
 
 body > div#wrapper > div#backgroundData:not(.visible) {
     display: none;
+}
+#augmentation {
+    display: block;
+    text-align: center;
+}
+
+#augmentation svg {
+    display: block;
+    width: 100%;
+}
+
+#augmentation h2 {
+    padding: 5px;
+    color: #00EBEC;
+    font-size: 30px;
+}
+
+#augmentation svg:nth-child(1) {
+    margin-bottom: 10px;
+}
+
+#envieContinuer {
+    border: 2px solid var(--border_neon);
+}
+
+#envieContinuer {
+    font-size: 20px;
+    text-align: center;
+}
+
+#envieContinuer h2 {
+    margin-top: 10px;
+    color: white;
+    font-size: 35px;
+    text-align: center;
+}
+
+#augmentation span {
+    display: block;
 }
 
 body > div#wrapper > div#backgroundData {
