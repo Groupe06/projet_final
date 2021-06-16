@@ -82,6 +82,8 @@
             Placement de l'image vide ici et du texte (avec le temps restant + V2)-->
 
             <div class="remaining_time">
+
+            
                 <div class="info_time">
                     <p id="dDay"><span>000</span>j <span>00</span>h <span>00</span>m <span>00</span>s</p>
                     <p class="info">Découvrir pourquoi ?</p>
@@ -91,7 +93,7 @@
             
             <!--Cercle radar (fond)-->
             <div class="radar">
-                <svg width="550" height="623" viewBox="0 0 624 623" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg viewBox="0 0 624 623" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <!-- Cercle représentant les années -->
                     <circle cx="310" cy="315" r="5" fill="white" fill-opacity="0.3"/>
                     <circle cx="310" cy="314" r="76.5" stroke="white" stroke-opacity="0.3" stroke-width="3"/>
@@ -172,50 +174,6 @@
        
     </div> 
     <script src="JS/rond.js"></script>
-
-
-    <?php  
-    '<script type="text/javascript">
-        var Affiche=document.getElementById("dDay");
-        function Rebour() {
-            var date1 = new Date();
-            var date2 = ' . ($date + ( $date - $data["annee_creation"] + $total_points)) / 2 . ';
-            var sec = (date2 - date1) / 1000;
-            var n = 24 * 3600;
-            if (sec > 0) {
-                j = Math.floor (sec / n);
-                h = Math.floor ((sec - (j * n)) / 3600);
-                mn = Math.floor ((sec - ((j * n + h * 3600))) / 60);
-                sec = Math.floor (sec - ((j * n + h * 3600 + mn * 60)));
-                Affiche.innerHTML = j + " j "+ h +" h "+ mn +" min "+ sec + " s";
-                window.status = "Temps restant : " + j +" j "+ h +" h "+ mn + " min " + sec + " s ";
-            }
-            tRebour = setTimeout ("Rebour();", 1000);
-        }
-        Rebour();
-    </script>';?> 
-
-
-
-    // essai conversion
-    <script>
-    var maVariable = 'foo';
- 
-    $.ajax({
-        url: 'fichier.php',
-        data: 'maVariable='+ maVariable,
-        success: function(reponse) {
-            alert(reponse); // reponse contient l'affichage du fichier PHP (soit echo)
-        }
-    });</script>
-    
-    
-     <?php
-    require("fonction_affichage.php");
-    affichage_personnage($bdd);
-
-    ?>
-    
 
 
 </body>

@@ -67,10 +67,10 @@ for (var i = 0; i < herosName.length ; i ++){
 
     return HerofullName
         
-}
+}}
 
 // Pour seul but de récupérer le nom du héro sur lequel l'utilisateur à cliqué
-*
+
 
 function recuperation_nom(HerofullName) {
     return HerofullName
@@ -102,9 +102,9 @@ function blink() {
 }
 
 function closeData() {
-document.querySelector("body > div#wrapper > div#backgroundData > div#data > header > img").onclick = function () {
-    document.querySelector("body > div#wrapper > div#backgroundData").classList.remove("visible")
-    document.querySelector("div#container > div.remaining_time").classList.toggle("visible")
-    
-}
+    document.querySelector("body > div#wrapper > div#backgroundData > div#data > header > img").onclick = function () {
+        document.querySelector("body > div#wrapper > div#backgroundData").classList.remove("visible")
+        document.querySelector("div#container > div.remaining_time").classList.toggle("visible")
+        
+    }
 }
