@@ -37,23 +37,32 @@ body > div#wrapper > header > div#mainHeader > div#logoAndNameShield {
 /* image du logo du shield du header*/
 body > div#wrapper > header > div#mainHeader> div#logoAndNameShield > img {
     width: max(7vw,75px);
+    animation: rotation 10s infinite linear;
 }
 /* 1er texte : S.H.I.E.L.D */
 body > div#wrapper > header > div#mainHeader> div#logoAndNameShield > div p:nth-child(1) {
-    margin-bottom: 3%;
-    font-size: max(2vw,20px);
+    font-size: max(2vw,18px);
+    
 }
+@keyframes rotation {
+    from {
+      transform: rotateY(0deg);
+    }
+    to {
+      transform: rotateY(359deg);
+    }
+  }
 /* 2nd texte : provate access*/
 body > div#wrapper > header > div#mainHeader  > div#logoAndNameShield > div p:nth-child(2) {
-    margin-bottom: max(1.5vw,15px);
-    font-size: max(1vw,9px);
+    margin-bottom: max(1.2vw,9px);
+    font-size: max(1.2vw,10px);
     color: rgba(255, 255, 255, 0.575);
 }
 /* 3eme texte : SUPERHEROES LIFE EXPECTANCY*/
 body > div#wrapper > header > div#mainHeader  > div#logoAndNameShield > div p:nth-child(3) {
     text-transform: uppercase;
-    font-size: max(1.5vw,13px);
-    line-height: max(2vw,15px)
+    font-size: max(1.2vw,10px);
+    line-height: max(1.5vw,15px)
 }
 
 /* Placement général des images qui forment le svg (total 3)*/
@@ -69,7 +78,7 @@ body > div#wrapper > header > img#midheader {
     width: 75vw;
     max-width: 100%;
     right: 0;
-    height: max(3.95vw,27px);
+    height: max(4.2vw, 35.4px);
 }
 
 body > div#wrapper > header > img#buttonheader {
@@ -92,6 +101,15 @@ body > div#wrapper > header >  a > img {
     width: min(55%,1.6vw);
 }
 
+a#Poweroff > img {
+    /*placement*/
+    position: absolute;
+    top: 1%;
+    right: 1%;
+    width: 2vw;
+    text-align: center;
+}
+
 /* Adaptation pour petits écrans et mobile du header */
 
 @media screen and (max-width: 630px) {
@@ -106,6 +124,7 @@ body > div#wrapper > header >  a > img {
     }
 }
 @media screen and (max-width: 583px) {
+
     body > div#wrapper > header > div#mainHeader {
         /*apparence*/
         width: max(100vw,365px);
@@ -113,7 +132,8 @@ body > div#wrapper > header >  a > img {
 
     body > div#wrapper > header > div#mainHeader > img {
         /*apparence*/
-        width: max(100vw,365px);
+        width: max(100vw,265px);
+        max-height: 95px;
     }
     body > div#wrapper > header > img {
         display: none;
@@ -121,6 +141,6 @@ body > div#wrapper > header >  a > img {
 
     body > div#wrapper > header > div#mainHeader> div#logoAndNameShield > img {
         /*apparence*/
-        width: max(17vw,75px);
+        width: min(80px,17vw);
     }
 }
