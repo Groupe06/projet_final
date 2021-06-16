@@ -72,7 +72,7 @@
                    barPercentage: 0.5, // Réglage de la largeur des bars - En % - Basé sur la taille du canva
                    categoryPercentage: 0.6, // Réglage de l'espace entre les bars
                    label: "Salaire ",
-                   data: [500000, 1000000], // TODO PHP
+                   data: dataBar, // TODO PHP
                    backgroundColor: ["#41BBC1", '#0C585B'], //Couleur des barres
                    borderColor: ["", ""], 
                    borderWidth: 2 // Epaisseur de la bordure 

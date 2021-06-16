@@ -1,6 +1,50 @@
     
-    var nom = "Iron-Man";
-    var id = 0;
+    // Correction de l'id - Adaptation pour Json
+    function idCorrect (id) {
+        switch (id) {
+            case '1' :
+                return 1;
+
+            case '2' :
+                return 3;
+            
+            case '3':
+                return 4;
+
+            case '4':
+                return 6;
+            
+            case '5': 
+                return 7;
+            
+            case '6':
+                return 8;
+
+            case '7':
+                return 2;
+            
+            case '8':
+                return 9;
+
+            case '9':
+                return 5;
+
+            case '10':
+                return 0;
+    }
+}
+    
+    
+    function prepareDataviz(ID, hero) {
+    // Variable et ID correspondant à un héro
+    if (hero === 'Iron Man') {
+        var nom = 'Iron-Man';
+    }
+    else {
+        var nom = hero;
+    }
+    
+    var id = idCorrect(ID);;
 
     //fetch("test.json")
     fetch("personnages.json")
@@ -57,10 +101,11 @@
 
 
         //Création du graphique 
-        let dataDoughnut = [filmSolo, filmMcu];
+        let dataDoughnut = [filmMcu, filmSolo];
         Graphique_Doughnut(dataDoughnut);
         
         })
         .catch(function(err) {
         // Une erreur est survenue
         });
+    }
