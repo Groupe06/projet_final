@@ -80,3 +80,20 @@ function blink() {
                 document.querySelector("div#container >div.remaining_time p.info").classList.remove("spoiler")
             },1500)
         } 
+// Fonction permettant de visualiser toutes la data autour d'un hero
+    document.querySelector("div#container > div.remaining_time >  div.info_time > p.info").onclick = function dataSpoiler() {
+    document.querySelector("div#container > div.remaining_time").classList.remove("visible")
+    document.querySelector("body > div#wrapper > div#backgroundData").classList.toggle("visible")
+    // 2crit dans la fenêtre le nom du héro sur lequel l'utilisateur à cliqué
+    document.querySelector("body > div#wrapper > div#backgroundData > div#data > header > div > p:nth-child(1)").innerHTML = lolo(HerofullName)
+    closeData()
+
+}
+
+function closeData() {
+document.querySelector("body > div#wrapper > div#backgroundData > div#data > header > img").onclick = function () {
+    document.querySelector("body > div#wrapper > div#backgroundData").classList.remove("visible")
+    document.querySelector("div#container > div.remaining_time").classList.toggle("visible")
+    
+}
+}
