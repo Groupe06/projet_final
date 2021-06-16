@@ -17,9 +17,10 @@ h2 {
 main {
     /* Paramètres du container */
     margin: 4vh 5vw;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    grid-gap: 2vw;
+    height: 70%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -81,6 +82,7 @@ body > div#wrapper > div#backgroundData:not(.visible) {
 #apparition h2 {
     font-size: 20px;
     color: var(--white);
+    width: 200px;
 }
 
 

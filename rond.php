@@ -201,7 +201,7 @@
                     <div id="doughnutContainer">
                         <canvas id="doughnut"></canvas>
                     </div>
-
+                </main>
 
                     
                 
