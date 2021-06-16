@@ -76,20 +76,32 @@
             </a>
         </header>    
 
-        <!-- Créàation du responsive avec l'affichage des images des superheroes-->
+        <!-- Création du responsive avec l'affichage des images des superheroes-->
         <div id="container">
-            <!-- _______________________ALEX_____________________
-            Placement de l'image vide ici et du texte (avec le temps restant + V2)-->
 
+            <!-- Texte onboarding qui disparait au clic -->
+            <div id="onboarding">
+                <div class="texte_onboarding">
+                    <img src="assets/icon_click.svg" alt="" >
+                    <p>Cliquez-sur un super hero pour découvrir les prédictions sur son espérance de vie</p>
+                </div>
+            </div>
+
+            <!-- Apparition au au clic du héro et du temps qu'il lui reste -->
             <div class="remaining_time">
 
-            
-                <div class="info_time">
-                    <p id="dDay"><span>000</span>j <span>00</span>h <span>00</span>m <span>00</span>s</p>
-                    <p class="info">Découvrir pourquoi ?</p>
+                <div id="all_infos">
+                    <div class="info_time">
+                        <p id="dDay"><span>000</span>j <span>00</span>h <span>00</span>m <span>00</span>s</p>
+                    </div>
+                    <div class="info_data">
+                        <p class="info">Découvrir pourquoi ?</p>
+                    </div>
                 </div>
                 <img src="#" id="hero" alt="Avengers logo">
             </div>
+
+
             
             <!--Cercle radar (fond)-->
             <div class="radar">
@@ -152,11 +164,10 @@
 
                 <header>
                     <div id="theHero">
+                        <!-- Nom du héro cliqué -->
                         <p></p>
-
-                        <!-- NICO _____________ -->
-
-                        <p>2008 - 2024</p>
+                        <!-- date de naissance et de mort du héro -->
+                        <p></p>
                     </div>
                     <img src="assets/croix.svg" alt=" Croix pour fermer la page de data">
                 </header>

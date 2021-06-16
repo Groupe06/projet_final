@@ -101,6 +101,15 @@ body > div#wrapper > header >  a > img {
     width: min(55%,1.6vw);
 }
 
+a#Poweroff > img {
+    /*placement*/
+    position: absolute;
+    top: 1%;
+    right: 1%;
+    width: 2vw;
+    text-align: center;
+}
+
 /* Adaptation pour petits écrans et mobile du header */
 
 @media screen and (max-width: 630px) {

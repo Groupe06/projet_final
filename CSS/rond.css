@@ -1,5 +1,3 @@
-
-
 /* Valeurs générals de la page */
 :root {
     --transparent:rgba(255,255,255,0);
@@ -54,9 +52,7 @@ body > div#wrapper > img#gauche {
 
 
 
-/* ALEX_________  Au si besoin de faire des modifs*/
 /*Le container contenant le radar + les noms + les photo et descriptif*/
-/*La container permettant de créer le responsive sur mobile*/
 body > div#wrapper > div#container {
     position: absolute;
     display: flex;
@@ -237,9 +233,46 @@ div#container > div.remaining_time {
     z-index: 2;
     margin-right: 7.5vw;
     height: calc(100% - 100px);
+    margin-top: 30px;
 
 }
+div#container > div.remaining_time > div#all_infos {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+div#container > div.remaining_time > div#all_infos > div.info_data {
+    border:1px solid var(--neon_blue);
+    background: rgba(0, 0, 0, 0.623);
+    border-radius: 35px;
+    width: max(12vw,80px);
+    color: var(--white);
+    font-family: 'zekton';
+    font-size: max(1vw,7px);
+    bottom:0;
+    z-index: 4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0.5vw 0;
+    margin-bottom: 30px;
+    cursor: pointer;
+}
 
+/*Lancement de l'animation au clic */
+div#container > div.remaining_time > div#all_infos > div.info_data {
+    animation: spoiler 0.5s linear 0.5s ;
+}
+
+/*Clignotement du texte qui ouvre la data*/
+@keyframes spoiler {
+    0% {opacity: 0;}
+    50% {opacity: 1;}
+    100% {opacity: 0;}
+}
 div#container > div.remaining_time img#hero {
     /*placement*/
     z-index: 3;
@@ -247,27 +280,26 @@ div#container > div.remaining_time img#hero {
     width: max(25vw,200px);
     height: max(25vw,200px);
 }
-div#container > div.remaining_time > div.info_time {
+div#container > div.remaining_time > div#all_infos > div.info_time {
     /*placement*/
     z-index: 3;
     /*apparence*/
     color: var(--white);
     font-family: 'zekton';
-    font-size: max(1vw,7px);
     display: flex;
     flex-direction: column;
 }
 
 
-div#container > div.remaining_time > div.info_time > p#dDay {
+div#container > div.remaining_time > div#all_infos > div.info_time > p#dDay {
     /*apparence*/
     white-space: nowrap;
     margin-top: 40%;
     margin-bottom: 0.5em;
-    font-size: max(2vw,7px);
+    font-size: max(2vw,15px);
     /* background-color: blueviolet; */
 }
-div#container > div.remaining_time > div.info_time > p.info {
+div#container > div.remaining_time > div#all_infos > div.info_time > p.info {
     /*apparence*/
     border-bottom: 1px white solid;
     width: fit-content;
@@ -277,26 +309,43 @@ div#container > div.remaining_time > div.info_time > p.info {
     font-size: 1.5em;
 }
 
-/*Lancement de l'animation au clic */
-div#container > div.remaining_time > div.info_time > p.spoiler {
-    animation: spoiler 0.5s linear 0.3s ;
+div.end {
+    display:none
 }
 
-/*Clignotement du texte qui ouvre la data*/
-@keyframes spoiler {
-    0% {opacity: 0;}
-    50% {opacity: 1;}
-    100% {opacity: 0;}
+#onboarding {
+    margin-right:10%;
+    margin-top: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #00ecec3a;
+    backdrop-filter: blur(2px) ;
+    -webkit-backdrop-filter: blur(2px);
+    width: max(32vw,300px) ;
+    height: max(8vw,80px);
+    box-sizing: border-box;
+    border-radius: 5px;
+
 }
 
-a#Poweroff > img {
-    /*placement*/
-    position: absolute;
-    top: 1%;
-    right: 1%;
-    width: 2vw;
-    text-align: center;
+#onboarding > div.texte_onboarding {
+    display: flex;
+    gap: 30px;
+    padding: 10px;
+    font-family: 'zekton';
+    color: white;
+    font-size:max(1vw,12px);
+    line-height: 20px;
+    box-sizing: border-box;
+    
 }
+#onboarding > div > img {
+    width: 25px;
+    height: 25px;
+    align-self: center;
+}
+
 
 
 @media screen and (max-width: 530px) {
@@ -326,6 +375,10 @@ a#Poweroff > img {
         align-items: baseline;
         margin-top: 20px;
         margin-bottom:0;
+    }
+    #onboarding {
+        margin-right: 0;
+        margin-top: 10%;
     }
 }
 
