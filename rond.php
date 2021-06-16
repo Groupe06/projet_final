@@ -242,14 +242,7 @@
 
 
 
-    // essai conversion
-
-    
-     <?php
-    
-    //affichage_personnage($bdd);
-
-    ?>
+   
     
 
 
