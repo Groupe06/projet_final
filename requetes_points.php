@@ -13,16 +13,6 @@ if($reponse):
 // WHILE -> tant que tous les personnages ne sont pas passés 
     while ($data = $reponse->fetch()):
 
-        
-        
-
-
-
-
-
-        // va pousser données de chaque personnage dans dictionnaire $donnees_json pour envoi
-        array_push($donnees_json, $donnees_personnage );
-
 
 
 // SECTION points anciennetée :
@@ -123,6 +113,8 @@ if($reponse):
     "mort" => $data["mort"], 
     "salaire_premier_film" => $data["salaire_premier_film"], "augmentation_salaire_film" => $data["augmentation_salaire_film"], "points" => $total_points ));
 
+    // va pousser données de chaque personnage dans dictionnaire $donnees_json pour envoi
+    array_push($donnees_json, $donnees_personnage );
 
     //encodage php en json
     $donnees_json = json_encode($donnees_json);
