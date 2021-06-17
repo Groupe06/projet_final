@@ -43,12 +43,21 @@ function numberWithSpaces(x) {
     // Variable et ID correspondant à un héro
     if (hero === 'Iron Man') {
         var nom = 'Iron-Man';
+    } 
+    else if (hero === 'Ant Man') {
+        var nom = 'Ant-Man';
+    }
+    else if (hero === 'Captain Marvel') {
+        var nom = 'CaptainMarvel'
+    }
+    else if (hero === 'Spiderman') {
+        var nom = 'Spider-Man'
     }
     else {
         var nom = hero;
     }
     
-    var id = idCorrect(ID);;
+    var id = idCorrect(ID);
 
     //fetch("test.json")
     fetch("personnages.json")
@@ -72,6 +81,8 @@ function numberWithSpaces(x) {
         const envieContinuer = value[id][nom].envie_continuer;
         var currentYear = new Date().getFullYear();
 
+        const nbPoints = value[id][nom].points;
+
         // Augmentation de salaire
         document.getElementById("augmentationSalaire").textContent = augmentation + "$";
 
@@ -80,12 +91,18 @@ function numberWithSpaces(x) {
         if (mort === null) {
             var Nb_annee = currentYear - debutMcu
             document.getElementById("Nb_annee").textContent = Nb_annee
+            // Affichage date d'apparition et de mort 
+            var anneeMort = currentYear + (nbPoints/2);
+            document.getElementById('lifeTime').textContent = debutMcu + ' - ' + Math.round(anneeMort);
         }
 
         else {
             var Nb_annee =  mort - debutMcu
-            document.getElementById("Nb_annee").textContent = Nb_annee
+            document.getElementById("Nb_annee").textContent = Nb_annee;
+            // Affichage date d'apparition et de mort 
+            document.getElementById('lifeTime').textContent = debutMcu + ' - ' +  mort;
         }
+
 
 
         // Envie de continuer de l'acteur 
@@ -94,7 +111,7 @@ function numberWithSpaces(x) {
             divEnvie.textContent = 'Oui';
         }
         else if (envieContinuer === 'N') {
-            divEnvie.textContent = 'Oui';
+            divEnvie.textContent = 'Non';
         }
         else {
             divEnvie.textContent = 'N/A';
