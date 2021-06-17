@@ -43,12 +43,23 @@ function numberWithSpaces(x) {
     // Variable et ID correspondant à un héro
     if (hero === 'Iron Man') {
         var nom = 'Iron-Man';
+    }    
+    else if (hero === 'Ant Man') {
+        var nom = 'Ant-Man';
+    }
+    else if (hero === 'Captain Marvel') {
+        var nom = 'CaptainMarvel'
+    }
+    else if (hero === 'Spiderman') {
+        var nom = 'Spider-Man'
     }
     else {
         var nom = hero;
     }
     
-    var id = idCorrect(ID);;
+    
+    var id = idCorrect(ID);
+   
 
     //fetch("test.json")
     fetch("personnages.json")
@@ -70,10 +81,12 @@ function numberWithSpaces(x) {
         const filmSolo = value[id][nom].nombre_films_solo;
         const filmMcu = value[id][nom].nombre_films_totaux - filmSolo;
         const envieContinuer = value[id][nom].envie_continuer;
+        const nbPoints = value[id][nom].points;
         var currentYear = new Date().getFullYear();
 
-        // Date d'appartition - date de mort estimée
-        document.getElementById('lifeTime').textContent = debutMcu + ' - ' 
+        
+        
+        
 
         // Augmentation de salaire
         document.getElementById("augmentationSalaire").textContent = augmentation + "$";
@@ -83,11 +96,17 @@ function numberWithSpaces(x) {
         if (mort === null) {
             var Nb_annee = currentYear - debutMcu
             document.getElementById("Nb_annee").textContent = Nb_annee
+            // Affichage date d'apparition et de mort 
+            var anneeMort = currentYear + (nbPoints/2);
+            document.getElementById('lifeTime').textContent = debutMcu + ' - ' + Math.round(anneeMort);
+
         }
 
         else {
             var Nb_annee =  mort - debutMcu
             document.getElementById("Nb_annee").textContent = Nb_annee
+            // Affichage date d'apparition et de mort 
+            document.getElementById('lifeTime').textContent = debutMcu + ' - ' +  mort;
         }
 
 
@@ -97,7 +116,7 @@ function numberWithSpaces(x) {
             divEnvie.textContent = 'Oui';
         }
         else if (envieContinuer === 'N') {
-            divEnvie.textContent = 'Oui';
+            divEnvie.textContent = 'Non';
         }
         else {
             divEnvie.textContent = 'N/A';
@@ -107,7 +126,7 @@ function numberWithSpaces(x) {
         let dataBar = [premierSalaire, dernierSalaire];
         Graphique_Bar(dataBar);
 
-        alert('again')
+        
         //Création du graphique 
         let dataDoughnut = [filmMcu, filmSolo];
         Graphique_Doughnut(dataDoughnut);
