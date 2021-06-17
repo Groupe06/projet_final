@@ -44,6 +44,7 @@ function numberWithSpaces(x) {
     if (hero === 'Iron Man') {
         var nom = 'Iron-Man';
     } 
+
     else if (hero === 'Ant Man') {
         var nom = 'Ant-Man';
     }
@@ -57,7 +58,10 @@ function numberWithSpaces(x) {
         var nom = hero;
     }
     
+    
     var id = idCorrect(ID);
+   
+
 
     //fetch("test.json")
     fetch("personnages.json")
@@ -68,7 +72,7 @@ function numberWithSpaces(x) {
         })
         .then(function(value) {
         console.log(value)
-        //alert(value.comments[0].message);
+        // alert(value.comments[0].message);
 
         //Déclaration des variables nécessaires
         const augmentation = numberWithSpaces(value[id][nom].augmentation_salaire_film);
@@ -79,9 +83,9 @@ function numberWithSpaces(x) {
         const filmSolo = value[id][nom].nombre_films_solo;
         const filmMcu = value[id][nom].nombre_films_totaux - filmSolo;
         const envieContinuer = value[id][nom].envie_continuer;
+        const nbPoints = value[id][nom].points;
         var currentYear = new Date().getFullYear();
 
-        const nbPoints = value[id][nom].points;
 
         // Augmentation de salaire
         document.getElementById("augmentationSalaire").textContent = augmentation + "$";
@@ -94,11 +98,14 @@ function numberWithSpaces(x) {
             // Affichage date d'apparition et de mort 
             var anneeMort = currentYear + (nbPoints/2);
             document.getElementById('lifeTime').textContent = debutMcu + ' - ' + Math.round(anneeMort);
+
         }
 
         else {
             var Nb_annee =  mort - debutMcu
+
             document.getElementById("Nb_annee").textContent = Nb_annee;
+
             // Affichage date d'apparition et de mort 
             document.getElementById('lifeTime').textContent = debutMcu + ' - ' +  mort;
         }

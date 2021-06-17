@@ -14,21 +14,23 @@
         canv1.id = 'doughnut';
         document.getElementById('doughnutContainer').appendChild(canv1);
 
-        var ctx = document.getElementById("doughnut").getContext("2d");
-        var myChart = new Chart(ctx, {
-            type: 'doughnut',
-            data: {
-                labels: ["Autre films", "Films solo"],
-                datasets: [{
-                    barPercentage: 0.5, // Réglage de la largeur des bars - En % - Basé sur la taille du canva
-                    categoryPercentage: 0.6, // Réglage de l'espace entre les bars
-                    label: "Salaire ",
-                    data: dataDoughnut,// TODO PHP
-                    backgroundColor: ["#41BBC1", '#0C585B'], //Couleur des barres
-                    borderColor: ["#FFFFFF", "#FFFFFF"], 
-                    borderWidth: 2 // Epaisseur de la bordure 
-                }]
-            },
+      
+    var ctx = document.getElementById("doughnut").getContext("2d");
+    var myChart = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+            labels: ["Autre films", "Films solo"],
+            datasets: [{
+                barPercentage: 0.5, // Réglage de la largeur des bars - En % - Basé sur la taille du canva
+                categoryPercentage: 0.6, // Réglage de l'espace entre les bars
+                label: "Salaire ",
+                data: dataDoughnut,// TODO PHP
+                backgroundColor: ["#41BBC1", '#0C585B'], //Couleur des barres
+                borderColor: ["#FFFFFF", "#FFFFFF"], 
+                borderWidth: 2 // Epaisseur de la bordure 
+            }]
+        },
+
         
         // Option du graphique
         options: { 
@@ -64,7 +66,7 @@
 
         var ctx = document.getElementById("barChart").getContext("2d");
 
-        
+          
        // Création du graphique 
        var myChart = new Chart(ctx, {
            type: 'bar',
