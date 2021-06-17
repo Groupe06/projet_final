@@ -7,35 +7,28 @@
     Chart.defaults.global.defaultFontSize = 14;
     
 
-    ///Graphique en doughnut - Nb film solo/ film en groupe
-    // Récupération du canvas 
-    const doughnutDiv = document.getElementById("doughnutContainer")
-    doughnutDiv.innerHTML = '';
-    var z = document.createElement('canvas'); // is a node
-    z.id = 'doughnut';
-    doughnutDiv.appendChild(z);
-
-    var ctx = document.getElementById("doughnut").getContext("2d");
-    
-    // Valeur des labels 
-    var labelValues = ["Iron Man", "Spider-Man : Far From home"]
-
     // Création du graphique 
     function Graphique_Doughnut(dataDoughnut) {
-    var myChart = new Chart(ctx, {
-        type: 'doughnut',
-        data: {
-            labels: ["Autre films", "Films solo"],
-            datasets: [{
-                barPercentage: 0.5, // Réglage de la largeur des bars - En % - Basé sur la taille du canva
-                categoryPercentage: 0.6, // Réglage de l'espace entre les bars
-                label: "Salaire ",
-                data: dataDoughnut,// TODO PHP
-                backgroundColor: ["#41BBC1", '#0C585B'], //Couleur des barres
-                borderColor: ["#FFFFFF", "#FFFFFF"], 
-                borderWidth: 2 // Epaisseur de la bordure 
-            }]
-        },
+        document.getElementById('doughnutContainer').innerHTML = '';
+        var canv1 = document.createElement('canvas');
+        canv1.id = 'doughnut';
+        document.getElementById('doughnutContainer').appendChild(canv1);
+
+        var ctx = document.getElementById("doughnut").getContext("2d");
+        var myChart = new Chart(ctx, {
+            type: 'doughnut',
+            data: {
+                labels: ["Autre films", "Films solo"],
+                datasets: [{
+                    barPercentage: 0.5, // Réglage de la largeur des bars - En % - Basé sur la taille du canva
+                    categoryPercentage: 0.6, // Réglage de l'espace entre les bars
+                    label: "Salaire ",
+                    data: dataDoughnut,// TODO PHP
+                    backgroundColor: ["#41BBC1", '#0C585B'], //Couleur des barres
+                    borderColor: ["#FFFFFF", "#FFFFFF"], 
+                    borderWidth: 2 // Epaisseur de la bordure 
+                }]
+            },
         
         // Option du graphique
         options: { 
@@ -64,11 +57,14 @@
         function Graphique_Bar(dataBar) {
         ///Graphique en bar - Evol. salaire premier/dernier film
         // Récupération du canvas 
-       var ctx = document.getElementById("barChart").getContext("2d");
-    
-       // Valeur des labels 
-       var labelValues = ["Premier salaire", "Dernier salaire"]
-   
+        document.getElementById('barContainer').innerHTML = '';
+        var canv = document.createElement('canvas');
+        canv.id = 'barChart';
+        document.getElementById('barContainer').appendChild(canv);
+
+        var ctx = document.getElementById("barChart").getContext("2d");
+
+        
        // Création du graphique 
        var myChart = new Chart(ctx, {
            type: 'bar',
