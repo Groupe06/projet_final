@@ -94,7 +94,6 @@ body > div#wrapper > div#backgroundData {
     justify-content: center;
     align-items: center;
     width: 100vw;
-    height: 100vh;
     z-index:1;
     backdrop-filter: blur(5px) ;
     -webkit-backdrop-filter: blur(5px);
@@ -105,7 +104,6 @@ body > div#wrapper > div#backgroundData > div#data {
     align-items: center;
     flex-direction: column;
     width: 75vw;
-    height: 75vh;
     background-color: rgba(0, 0, 0, 0.5); /*A revoir ensemble*/
     border-left: 2px solid var(--border_neon);
     border-right: 2px solid var(--border_neon);
@@ -130,11 +128,11 @@ body > div#wrapper > div#backgroundData > div#data > header > div {
 
 }
 body > div#wrapper > div#backgroundData > div#data > header > div > p:nth-child(1) {
-    font-size : max(2.5vw,20px);
+    font-size : max(2.5vw,11px);
     margin-bottom: 10px;
 }
 body > div#wrapper > div#backgroundData > div#data > header > div > p:nth-child(2) {
-    font-size : max(1.5vw,10px);
+    font-size : max(1.5vw,9px);
 }
 body > div#wrapper > div#backgroundData > div#data > header > img {
     grid-column-start: 3;
@@ -156,15 +154,8 @@ body > div#wrapper > div#backgroundData > div#data > header > img {
     }
     body > div#wrapper > div#backgroundData > div#data {
         align-self: flex-end;
-        margin-top: 200px;
-        width: 100vw;
         background-color: rgba(0, 0, 0, 0.8); /*A revoir ensemble*/
 
     }
 
-}
-@media screen and (max-width: 400px) {
-    body > div#wrapper > div#backgroundData > div#data {
-        height: 80vh;
-    }
 }
