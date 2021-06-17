@@ -201,7 +201,7 @@
                        
                   
                     <div id="barContainer">
-                    <canvas id="barChart"></canvas>
+
                     </div>
 
                     <div id="envieContinuer">
@@ -214,7 +214,7 @@
                     </div>
 
                     <div id="doughnutContainer">
-                        <canvas id="doughnut"></canvas>
+                        
                     </div>
                 </main>
 
