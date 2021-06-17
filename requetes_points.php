@@ -13,21 +13,6 @@ if($reponse):
 // WHILE -> tant que tous les personnages ne sont pas passés 
     while ($data = $reponse->fetch()):
 
-        // Récupération données pour remplissage "$donnes_json" puis mise envoi dans fichier json 
-        // chaque tour de boucle sera nouveau perso 
-        $donnees_personnage = array( $data["nom"] => array( "annee_creation" => $data["annee_creation"], 
-        "nombre_films_solo" => $data["nombre_films_solo"],
-        "nombre_films_totaux" => $data["nombre_films_totaux"], "salaire_dernier_film" => $data["salaire_dernier_film"], "envie_continuer" => $data["envie_continuer"], 
-        "mort" => $data["mort"], 
-        "salaire_premier_film" => $data["salaire_premier_film"], "augmentation_salaire_film" => $data["augmentation_salaire_film"] ));
-
-
-
-
-
-
-        // va pousser données de chaque personnage dans dictionnaire $donnees_json pour envoi
-        array_push($donnees_json, $donnees_personnage );
 
 
 
@@ -116,12 +101,7 @@ if($reponse):
         require("cercle2.php");
         $i++;
         
-
-
-    endwhile; 
-//FIN while 
-
-    //DEBUT remplissage JSON
+//DEBUT remplissage JSON
     // Récupération données pour remplissage "$donnes_json" puis mise envoi dans fichier json 
     // chaque tour de boucle sera nouveau perso 
     $donnees_personnage = array( $data["nom"] => 
@@ -133,11 +113,16 @@ if($reponse):
     "mort" => $data["mort"], 
     "salaire_premier_film" => $data["salaire_premier_film"], 
     "augmentation_salaire_film" => $data["augmentation_salaire_film"], 
-    "points" =>$total_points ));
+    "points" => $total_points ));
 
 
     // va pousser données de chaque personnage dans dictionnaire $donnees_json pour envoi
     array_push($donnees_json, $donnees_personnage );
+
+    endwhile; 
+//FIN while 
+
+
 
 
     //encodage php en json
