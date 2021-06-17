@@ -107,6 +107,7 @@ body > div#wrapper > div#backgroundData > div#data {
     background-color: rgba(0, 0, 0, 0.5); /*A revoir ensemble*/
     border-left: 2px solid var(--border_neon);
     border-right: 2px solid var(--border_neon);
+    margint-top: min(65vh,50px);
 }
 
 body > div#wrapper > div#backgroundData > div#data > header {
