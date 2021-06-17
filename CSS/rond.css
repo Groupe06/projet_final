@@ -35,7 +35,7 @@ body > div#wrapper{
     box-sizing: content-box;
     overflow:hidden;
     /* background */
-    background: url("/HETIC wamp/projet_final/assets/fondNoirCarreaux.png") center;
+    background: url("/assets/fondNoirCarreaux.png") center;
     
 }
 

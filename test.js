@@ -59,7 +59,7 @@ function numberWithSpaces(x) {
         })
         .then(function(value) {
         console.log(value)
-        //alert(value.comments[0].message);
+        // alert(value.comments[0].message);
 
         //Déclaration des variables nécessaires
         const augmentation = numberWithSpaces(value[id][nom].augmentation_salaire_film);
@@ -71,6 +71,9 @@ function numberWithSpaces(x) {
         const filmMcu = value[id][nom].nombre_films_totaux - filmSolo;
         const envieContinuer = value[id][nom].envie_continuer;
         var currentYear = new Date().getFullYear();
+
+        // Date d'appartition - date de mort estimée
+        document.getElementById('lifeTime').textContent = debutMcu + ' - ' 
 
         // Augmentation de salaire
         document.getElementById("augmentationSalaire").textContent = augmentation + "$";
@@ -104,7 +107,7 @@ function numberWithSpaces(x) {
         let dataBar = [premierSalaire, dernierSalaire];
         Graphique_Bar(dataBar);
 
-        
+        alert('again')
         //Création du graphique 
         let dataDoughnut = [filmMcu, filmSolo];
         Graphique_Doughnut(dataDoughnut);
