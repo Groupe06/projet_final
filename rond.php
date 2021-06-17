@@ -169,7 +169,7 @@
                         <p></p>
                         <!-- date de naissance et de mort du héro -->
                         <p></p>
-                        <p>2008 - 2024</p> <!-- Todo PHP !-->
+                        <p id="lifeTime"></p> <!-- Todo PHP !-->
                     </div>
                     <img src="assets/croix.svg" alt=" Croix pour fermer la page de data">
                 </header>
