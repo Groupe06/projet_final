@@ -63,6 +63,7 @@ body > div#wrapper > div#backgroundData:not(.visible) {
 #envieContinuer {
     font-size: 20px;
     text-align: center;
+    padding: 10px;
 }
 
 #envieContinuer h2 {
