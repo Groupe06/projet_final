@@ -94,6 +94,7 @@ body > div#wrapper > div#backgroundData {
     justify-content: center;
     align-items: center;
     width: 100vw;
+    height:100%;
     z-index:1;
     backdrop-filter: blur(5px) ;
     -webkit-backdrop-filter: blur(5px);
@@ -107,7 +108,7 @@ body > div#wrapper > div#backgroundData > div#data {
     background-color: rgba(0, 0, 0, 0.5); /*A revoir ensemble*/
     border-left: 2px solid var(--border_neon);
     border-right: 2px solid var(--border_neon);
-    margint-top: min(65vh,550px);
+    margin-top: min(65vh,550px);
 }
 
 body > div#wrapper > div#backgroundData > div#data > header {
