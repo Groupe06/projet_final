@@ -43,7 +43,8 @@ function numberWithSpaces(x) {
     // Variable et ID correspondant à un héro
     if (hero === 'Iron Man') {
         var nom = 'Iron-Man';
-    }    
+    } 
+
     else if (hero === 'Ant Man') {
         var nom = 'Ant-Man';
     }
@@ -60,6 +61,7 @@ function numberWithSpaces(x) {
     
     var id = idCorrect(ID);
    
+
 
     //fetch("test.json")
     fetch("personnages.json")
@@ -84,9 +86,6 @@ function numberWithSpaces(x) {
         const nbPoints = value[id][nom].points;
         var currentYear = new Date().getFullYear();
 
-        
-        
-        
 
         // Augmentation de salaire
         document.getElementById("augmentationSalaire").textContent = augmentation + "$";
@@ -104,10 +103,13 @@ function numberWithSpaces(x) {
 
         else {
             var Nb_annee =  mort - debutMcu
-            document.getElementById("Nb_annee").textContent = Nb_annee
+
+            document.getElementById("Nb_annee").textContent = Nb_annee;
+
             // Affichage date d'apparition et de mort 
             document.getElementById('lifeTime').textContent = debutMcu + ' - ' +  mort;
         }
+
 
 
         // Envie de continuer de l'acteur 

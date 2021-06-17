@@ -7,11 +7,6 @@
     Chart.defaults.global.defaultFontSize = 14;
     
 
-    ///Graphique en doughnut - Nb film solo/ film en groupe
-    // Récupération du canvas 
-    
-    
-
     // Création du graphique 
     function Graphique_Doughnut(dataDoughnut) {
         document.getElementById('doughnutContainer').innerHTML = '';
@@ -19,6 +14,7 @@
         canv1.id = 'doughnut';
         document.getElementById('doughnutContainer').appendChild(canv1);
 
+      
     var ctx = document.getElementById("doughnut").getContext("2d");
     var myChart = new Chart(ctx, {
         type: 'doughnut',
@@ -34,6 +30,7 @@
                 borderWidth: 2 // Epaisseur de la bordure 
             }]
         },
+
         
         // Option du graphique
         options: { 
@@ -68,7 +65,8 @@
         document.getElementById('barContainer').appendChild(canv);
 
         var ctx = document.getElementById("barChart").getContext("2d");
-   
+
+          
        // Création du graphique 
        var myChart = new Chart(ctx, {
            type: 'bar',

@@ -201,7 +201,7 @@
                        
                   
                     <div id="barContainer">
-                       
+
                     </div>
 
                     <div id="envieContinuer">
@@ -214,7 +214,6 @@
                     </div>
 
                     <div id="doughnutContainer">
-                    
 
                     </div>
                 </main>
