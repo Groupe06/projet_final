@@ -57,9 +57,9 @@ body > div#wrapper > div#container {
     position: absolute;
     display: flex;
     flex-wrap: wrap-reverse;/*pour renvoyer l'image en bas en bas au responsive*/
-    justify-content: center;
-    align-items: center;
-    align-content: space-around;
+    justify-content: space-evenly;
+    align-items: space-around;
+    align-content: space-evenly;
     box-sizing: content-box;
     /* overflow: hidden; */
     width: 100vw;
@@ -78,15 +78,15 @@ div#container > div.radar {
     align-items: center;
     margin-top: 5vw;
     /*apparence*/
-    width: max(37vw,200px);
-    height: max(37vw,200px);
+    width: max(37vw,250px);
+    height: max(37vw,250px);
 }
 
 /* Le svg du radar et son placement*/
 div.radar svg {
     /*apparence*/
-    width: max(36vw,350px);
-    height: max(36vw,350px);
+    width: max(36vw,250px);
+    height: max(36vw,250px);
 }
 
 /*apparence de l'avancée de la vie de chaque hero */
@@ -110,27 +110,27 @@ rect {
 .radar ul#date li:nth-child(1) {
     position: absolute;
     color: var(--neon_blue);
-    bottom: max(10.5vw,58px);
+    bottom: max(10.5vw,70px);
 }
 /*2010*/
 .radar ul#date li:nth-child(2) {
     position: absolute;
-    top: max(3.5vw,20px);
+    top: max(3.5vw,25px);
 }
 /*2020*/
 .radar ul#date li:nth-child(3) {
     position: absolute;
-    top: max(8vw,45px);
+    top: max(8vw,55px);
 }
 /*2030*/
 .radar ul#date li:nth-child(4) {
     position: absolute;
-    top: max(12.5vw,70px);
+    top: max(12.5vw,88px);
 }
 /*2040*/
 .radar ul#date li:nth-child(5) {
     position: relative;
-    top: max(16.5vw,93px);
+    top: max(16.5vw,117px);
 }
 
 /* Tout les noms des héros */
@@ -157,62 +157,62 @@ rect {
 
 /* Hulk*/
 .radar p:nth-child(1) {
-    bottom: max(18vw,100px);
-    left: max(6vw,20px);
+    bottom: max(18vw,130px);
+    left: max(6vw,40px);
 }
 
 /* Captain America */
 .radar p:nth-child(2) {
-    bottom: max(12vw,55px);
-    left: max(17vw,90px);
+    bottom: max(12vw,75px);
+    left: max(17vw,110px);
 }
 
 /* Black Widow */
 .radar p:nth-child(3) {
-    left: max(20vw,105px);
+    left: max(20vw,135px);
     bottom: -1.5vw;
 }
 
 /* Doctor Strange */
 .radar p:nth-child(4) {
-    top: max(12vw,60px);
-    left: max(17vw,85px);
+    top: max(12vw,80px);
+    left: max(17vw,110px);
 }
 
 /* Spiderman */
 .radar p:nth-child(5) {
-    top: max(18vw,100px);
-    left: max(6vw,10px);
+    top: max(18vw,130px);
+    left: max(6vw,30px);
 }
 
 /* Black Panther */
 .radar p:nth-child(6) {
-    top: max(18vw,100px);
-    right: max(6vw,10px);
+    top: max(18vw,130px);
+    right: max(6vw,30px);
 }
 
 /* Thor */
 .radar p:nth-child(7) {
-    top: max(12vw,60px);
-    right: max(17vw,85px);
+    top: max(12vw,90px);
+    right: max(17vw,110px);
 }
 
 /* Captain Marvel */
 .radar p:nth-child(8) {
-    right: max(20vw,105px);
+    right: max(20vw,140px);
     bottom: -1.5vw;
 }
 
 /* Ant-man */
 .name p:nth-child(9) {
-    bottom: max(12vw,60px);
-    right: max(17vw,90px);
+    bottom: max(12vw,90px);
+    right: max(17vw,110px);
 }
 
 /* Iron man */
 .radar p:nth-child(10) {
-    bottom: max(18vw,100px);
-    right: max(6vw,5px);
+    bottom: max(18vw,130px);
+    right: max(6vw,40px);
 
 }
 
@@ -314,8 +314,6 @@ div#container > div.remaining_time > div#all_infos > div.info_time > p.info {
 }
 
 #onboarding:not(.end) {
-    margin-right:10%;
-    margin-top: 30%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -346,7 +344,18 @@ div#container > div.remaining_time > div#all_infos > div.info_time > p.info {
     align-self: center;
 }
 
-
+@media screen and (max-width:950px) {
+    body, body > div#wrapper {
+        overflow-y: auto;
+    }
+    body > div#wrapper {
+        margin-right:0;
+    }
+    svg {
+        width: max(40vw,250px);
+        height: max(40vw,250px);
+    }
+}
 
 @media screen and (max-width: 530px) {
     body > div#wrapper > img#gauche {
@@ -364,8 +373,7 @@ div#container > div.remaining_time > div#all_infos > div.info_time > p.info {
     }
     
     div#container > div.radar {
-        margin-top: 100px;
-        margin-bottom: 2em;
+        margin-top: 140px;
     }
     div#container > div.remaining_time > div.info_time > p.dDay {
         font-size: 2em;
@@ -378,7 +386,7 @@ div#container > div.remaining_time > div#all_infos > div.info_time > p.info {
     }
     #onboarding {
         margin-right: 0;
-        margin-top: 10%;
+        margin-top: 35px;
     }
 }
 
